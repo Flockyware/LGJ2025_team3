@@ -1,15 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhqr6sholxy1h"]
+[gd_scene load_steps=4 format=3 uid="uid://bhqr6sholxy1h"]
 
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_xaqdp"]
-<<<<<<< HEAD
-[ext_resource type="FontFile" uid="uid://cumdkjhxvwu1s" path="res://assets/fonts/Lambda-Regular.otf" id="2_hnhi1"]
-[ext_resource type="Theme" uid="uid://5rr8thblij44" path="res://scenes/start_menu.tres" id="2_pw48x"]
-=======
 [ext_resource type="Theme" uid="uid://5rr8thblij44" path="res://assets/start_menu.tres" id="2_pw48x"]
->>>>>>> f88859f2c4b6decb0252f1a6b1edcde6ce5554aa
 
 [sub_resource type="LabelSettings" id="LabelSettings_2u51o"]
-font = ExtResource("2_hnhi1")
 font_size = 96
 
 [node name="start_menu" type="Control"]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cns602t8rqrrf"]
+[gd_scene load_steps=14 format=3 uid="uid://cns602t8rqrrf"]
 
 [ext_resource type="Script" path="res://scenes/cauldron.gd" id="1_fypk7"]
 [ext_resource type="Texture2D" uid="uid://ca4wh7ryvc8v4" path="res://icon.svg" id="1_oqi4o"]
 [ext_resource type="Texture2D" uid="uid://b6orkp11ngly3" path="res://assets/calderoDeprecated.png" id="2_chyaa"]
 [ext_resource type="Texture2D" uid="uid://bgkck0tg0bcec" path="res://assets/materialEjemplo.png" id="2_dsm4x"]
+[ext_resource type="Texture2D" uid="uid://csnkcoev2qa34" path="res://assets/Pocion1.png" id="4_mstxl"]
+[ext_resource type="Texture2D" uid="uid://dqwsdhtbyd5u3" path="res://assets/Pocion2.png" id="5_o0lnv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_flfaj"]
 animations = [{
@@ -64,7 +66,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(73.635, -0.25, 0, 0.25, 0, 247.165, -0.25, 0, 0.25, 0, 73.635, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(-0.0833333, 1, 1.96667)
+"times": PackedFloat32Array(0, 1, 1.96667)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -75,7 +77,7 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(66.69, -0.25, 0, 0.25, 0, 93.765, -0.25, 0, 0.25, 0, 66.69, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(-0.0833333, 1, 1.96667)
+"times": PackedFloat32Array(0, 1, 1.96667)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
@@ -86,13 +88,92 @@ tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1.59349, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(-0.0416667, 1, 2.00833)
+"times": PackedFloat32Array(0.0416667, 1, 2.00833)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s6r6e"]
 _data = {
 "RESET": SubResource("Animation_xum38"),
 "verter pocima": SubResource("Animation_e50d3")
+}
+
+[sub_resource type="Animation" id="Animation_bt3v7"]
+resource_name = "verterPocima2"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(79, -0.25, 0, 0.25, 0, -65.058, -0.25, 0, 0.25, 0, -209.115, -0.25, 0, 0.25, 0, 79, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(75, -0.25, 0, 0.25, 0, 16.812, -0.25, 0, 0.25, 0, 77.325, -0.25, 0, 0.25, 0, 75, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 2)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -1.5516, -0.25, 0, 0.25, 0, -2.61276, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 2)
+}
+
+[sub_resource type="Animation" id="Animation_2vuuc"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(79, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(75, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t5nlc"]
+_data = {
+"RESET": SubResource("Animation_2vuuc"),
+"verterPocima2": SubResource("Animation_bt3v7")
 }
 
 [node name="cauldron" type="Node2D"]
@@ -147,8 +228,8 @@ expand_icon = true
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A"]
 position = Vector2(73.635, 66.69)
-scale = Vector2(2.105, 2.105)
-texture = ExtResource("2_dsm4x")
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("4_mstxl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A"]
 libraries = {
@@ -159,9 +240,19 @@ libraries = {
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 8
-icon = ExtResource("2_dsm4x")
 icon_alignment = 1
 expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_B"]
+position = Vector2(79, 75)
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("5_o0lnv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_B"]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_t5nlc")
+}
 
 [node name="buttons_container_down" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
 layout_mode = 2

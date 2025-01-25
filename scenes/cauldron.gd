@@ -8,13 +8,16 @@ var ingridients = {
 	"c":"c",
 	"d":"d",
 }
-
+@onready
+var animacionButtonA=$CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A/AnimationPlayer
 func recipe_print():
 	print(recipe)
 
 func _on_button_a_pressed() -> void:
+	animacionButtonA.play()
 	recipe.append(ingridients.a)
 	recipe_print()
+	
 
 func _on_button_b_pressed() -> void:
 	recipe.append(ingridients.b)
@@ -27,3 +30,7 @@ func _on_button_c_pressed() -> void:
 func _on_button_d_pressed() -> void:
 	recipe.append(ingridients.d)
 	recipe_print()
+
+
+func _on_button_a_mouse_entered() -> void:
+	pass # Replace with function body.

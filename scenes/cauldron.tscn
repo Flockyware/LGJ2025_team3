@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cns602t8rqrrf"]
+[gd_scene load_steps=9 format=3 uid="uid://cns602t8rqrrf"]
 
 [ext_resource type="Script" path="res://scenes/cauldron.gd" id="1_fypk7"]
 [ext_resource type="Texture2D" uid="uid://ca4wh7ryvc8v4" path="res://icon.svg" id="1_oqi4o"]
-[ext_resource type="Texture2D" uid="uid://b6orkp11ngly3" path="res://assets/caldero.png" id="2_chyaa"]
+[ext_resource type="Texture2D" uid="uid://b6orkp11ngly3" path="res://assets/calderoDeprecated.png" id="2_chyaa"]
 [ext_resource type="Texture2D" uid="uid://bgkck0tg0bcec" path="res://assets/materialEjemplo.png" id="2_dsm4x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_flfaj"]
@@ -15,6 +15,84 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_e50d3"]
+resource_name = "verter pocima"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(73.635, -0.25, 0, 0.25, 0, 247.165, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(66.69, -0.25, 0, 0.25, 0, 93.765, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1.59349, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_xum38"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(73.635, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(66.69, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s6r6e"]
+_data = {
+"RESET": SubResource("Animation_xum38"),
+"verter pocima": SubResource("Animation_e50d3")
+}
 
 [node name="cauldron" type="Node2D"]
 script = ExtResource("1_fypk7")
@@ -31,7 +109,6 @@ scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_flfaj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -64,9 +141,18 @@ theme_override_constants/separation = 600
 [node name="Button_A" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
-icon = ExtResource("2_dsm4x")
 icon_alignment = 1
 expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A"]
+position = Vector2(73.635, 66.69)
+scale = Vector2(2.105, 2.105)
+texture = ExtResource("2_dsm4x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A"]
+libraries = {
+"": SubResource("AnimationLibrary_s6r6e")
+}
 
 [node name="Button_B" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up"]
 custom_minimum_size = Vector2(150, 150)
@@ -96,6 +182,7 @@ icon = ExtResource("2_dsm4x")
 icon_alignment = 1
 expand_icon = true
 
+[connection signal="mouse_entered" from="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_B" to="." method="_on_button_b_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_C" to="." method="_on_button_c_pressed"]

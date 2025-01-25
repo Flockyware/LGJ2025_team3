@@ -16,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xaqdp")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Fondo" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,54 +24,62 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Margenes" type="MarginContainer" parent="."]
 layout_mode = 1
+<<<<<<< HEAD
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+=======
+anchors_preset = -1
+anchor_left = 0.25
+anchor_right = 0.75
+anchor_bottom = 0.999
+offset_top = 1.5
+offset_right = -0.00012207
+offset_bottom = -0.420044
+>>>>>>> ec448e51f1d100f33bbf3663db1629e0b1aee7ea
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
+metadata/_edit_group_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="contenedor principal" type="VBoxContainer" parent="Margenes"]
 layout_mode = 2
+<<<<<<< HEAD
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 292
+=======
+theme_override_constants/separation = 300
+>>>>>>> ec448e51f1d100f33bbf3663db1629e0b1aee7ea
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Titulo" type="Label" parent="Margenes/contenedor principal"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-text = "PRUEBA"
+text = "TITULO"
 label_settings = SubResource("LabelSettings_2u51o")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Botones" type="VBoxContainer" parent="Margenes/contenedor principal"]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = 80
-alignment = 1
+theme_override_constants/separation = 50
 
-[node name="start" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="start" type="Button" parent="Margenes/contenedor principal/Botones"]
 custom_minimum_size = Vector2(140, 70)
 layout_mode = 2
 theme = ExtResource("2_pw48x")
 text = "START"
 
-[node name="exit" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="exit" type="Button" parent="Margenes/contenedor principal/Botones"]
 custom_minimum_size = Vector2(140, 70)
 layout_mode = 2
 theme = ExtResource("2_pw48x")
 text = "EXIT"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Margenes/contenedor principal/Botones/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Margenes/contenedor principal/Botones/exit" to="." method="_on_exit_pressed"]

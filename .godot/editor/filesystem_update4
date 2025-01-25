@@ -1,2 +1,5 @@
 res://scenes/game.tscn
+res://assets/start_menu.tres
+res://scenes/start_menu.tscn
 res://scenes/cauldron.tscn
+res://addons/dialogic/Core/DialogicGameHandler.gd

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqmyet1uofx8y"]
 
-[ext_resource type="PackedScene" path="res://scenes/cauldron.tscn" id="1_5vqgu"]
+[ext_resource type="PackedScene" uid="uid://by30fyxr4l4u6" path="res://scenes/cauldron.tscn" id="1_5vqgu"]
 [ext_resource type="PackedScene" path="res://scenes/client.tscn" id="2_l3w83"]
 
 [node name="game" type="Node"]

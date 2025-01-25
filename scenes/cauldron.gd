@@ -14,7 +14,7 @@ func recipe_print():
 	print(recipe)
 
 func _on_button_a_pressed() -> void:
-	animacionButtonA.play()
+	animacionButtonA.play("verter pocima")
 	recipe.append(ingridients.a)
 	recipe_print()
 	

@@ -1,2 +1,6 @@
+res://scenes/start_menu.tscn
+res://scenes/start_menu.tres
 res://scenes/game.tscn
+res://assets/start_menu.tres
 res://scenes/cauldron.tscn
+res://scenes/client.tscn

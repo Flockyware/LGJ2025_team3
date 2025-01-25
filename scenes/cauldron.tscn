@@ -1,11 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://cns602t8rqrrf"]
+[gd_scene load_steps=22 format=3 uid="uid://cns602t8rqrrf"]
 
 [ext_resource type="Script" path="res://scenes/cauldron.gd" id="1_fypk7"]
-[ext_resource type="Texture2D" uid="uid://ca4wh7ryvc8v4" path="res://icon.svg" id="1_oqi4o"]
 [ext_resource type="Texture2D" uid="uid://b6orkp11ngly3" path="res://assets/calderoDeprecated.png" id="2_chyaa"]
-[ext_resource type="Texture2D" uid="uid://bgkck0tg0bcec" path="res://assets/materialEjemplo.png" id="2_dsm4x"]
+[ext_resource type="Texture2D" uid="uid://c5mbbjd45ppl2" path="res://assets/fondo.png" id="2_wvso6"]
+[ext_resource type="Texture2D" uid="uid://b8gqu8s3igmt" path="res://assets/mesa.png" id="3_d6mtc"]
 [ext_resource type="Texture2D" uid="uid://csnkcoev2qa34" path="res://assets/Pocion1.png" id="4_mstxl"]
 [ext_resource type="Texture2D" uid="uid://dqwsdhtbyd5u3" path="res://assets/Pocion2.png" id="5_o0lnv"]
+[ext_resource type="Texture2D" uid="uid://cryyv0ex71oyt" path="res://assets/Pocion3.png" id="6_6wn1w"]
+[ext_resource type="Texture2D" uid="uid://4xvf2tppjjyb" path="res://assets/Pocion4.png" id="7_v2anf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_flfaj"]
 animations = [{
@@ -176,14 +178,177 @@ _data = {
 "verterPocima2": SubResource("Animation_bt3v7")
 }
 
+[sub_resource type="Animation" id="Animation_syp3r"]
+resource_name = "verterPocima3"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(70, -0.25, 0, 0.25, 0, 163, -0.25, 0, 0.25, 0, 339, -0.25, 0, 0.25, 0, 70, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.633333, 1, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(70, -0.25, 0, 0.25, 0, -394, -0.25, 0, 0.25, 0, -377, -0.25, 0, 0.25, 0, -394, -0.25, 0, 0.25, 0, 70, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.733333, 1, 1.26667, 2)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1.32283, -0.25, 0, 0.25, 0, 1.95826, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.733333, 1, 2)
+}
+
+[sub_resource type="Animation" id="Animation_d3dj7"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(70, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(70, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7m4h1"]
+_data = {
+"RESET": SubResource("Animation_d3dj7"),
+"verterPocima3": SubResource("Animation_syp3r")
+}
+
+[sub_resource type="Animation" id="Animation_ikwyp"]
+resource_name = "verterPocima4"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(72.53, -0.25, 0, 0.25, 0, -183, -0.25, 0, 0.25, 0, 72.53, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 1.8)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(64.675, -0.25, 0, 0.25, 0, -378, -0.25, 0, 0.25, 0, 64.675, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 1.8)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -2.28464, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 1.8)
+}
+
+[sub_resource type="Animation" id="Animation_2d25m"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(72.53, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(64.675, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g0om0"]
+_data = {
+"RESET": SubResource("Animation_2d25m"),
+"verterPocima4": SubResource("Animation_ikwyp")
+}
+
 [node name="cauldron" type="Node2D"]
 script = ExtResource("1_fypk7")
 
 [node name="background" type="Sprite2D" parent="."]
 modulate = Color(0.0475577, 0.0475576, 0.0475576, 1)
 position = Vector2(936.5, 521)
-scale = Vector2(15.6328, 9.14063)
-texture = ExtResource("1_oqi4o")
+scale = Vector2(1.383, 0.809)
+texture = ExtResource("2_wvso6")
+
+[node name="Mesa" type="Sprite2D" parent="."]
+position = Vector2(953, 581.34)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_d6mtc")
 
 [node name="sprite_cauldron" type="AnimatedSprite2D" parent="."]
 position = Vector2(966, 521)
@@ -207,9 +372,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -405.0
+offset_left = -450.0
 offset_top = -282.0
-offset_right = 405.0
+offset_right = 450.0
 offset_bottom = 336.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -223,6 +388,7 @@ theme_override_constants/separation = 600
 [node name="Button_A" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
+flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -240,6 +406,7 @@ libraries = {
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 8
+flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -262,17 +429,36 @@ theme_override_constants/separation = 600
 [node name="Button_C" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
-icon = ExtResource("2_dsm4x")
+flat = true
 icon_alignment = 1
-expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_C"]
+position = Vector2(70, 70)
+scale = Vector2(0.395, 0.395)
+texture = ExtResource("6_6wn1w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_C"]
+libraries = {
+"": SubResource("AnimationLibrary_7m4h1")
+}
 
 [node name="Button_D" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 8
-icon = ExtResource("2_dsm4x")
+flat = true
 icon_alignment = 1
 expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_D"]
+position = Vector2(72.53, 64.675)
+scale = Vector2(0.49, 0.49)
+texture = ExtResource("7_v2anf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_D"]
+libraries = {
+"": SubResource("AnimationLibrary_g0om0")
+}
 
 [connection signal="mouse_entered" from="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_pressed"]

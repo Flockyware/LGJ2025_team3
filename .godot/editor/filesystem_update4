@@ -1,2 +1,4 @@
 res://scenes/start_menu.tscn
 res://scenes/start_menu.tres
+res://scenes/game.tscn
+res://scripts/start_menu.gd

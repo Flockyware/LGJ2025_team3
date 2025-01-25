@@ -9,11 +9,15 @@ var ingridients = {
 	"d":"d",
 }
 @onready
+var pocimaA=$CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A
+@onready
 var animacionButtonA=$CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A/AnimationPlayer
+
 func recipe_print():
 	print(recipe)
 
 func _on_button_a_pressed() -> void:
+	pocimaA.visible=false
 	animacionButtonA.play("verter pocima")
 	recipe.append(ingridients.a)
 	recipe_print()

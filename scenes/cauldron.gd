@@ -1,13 +1,22 @@
 extends Node2D
 
-var recipe:Array = []
 
+# diccionario de los materiales
 var ingridients = {
 	"a":"a",
 	"b":"b",
 	"c":"c",
 	"d":"d",
 }
+
+# pocimas
+var pocimaDePielSuave:Array=["b","d","a"]
+var pocima2:Array=["b","c","a","c"]
+
+#pocima actual
+var recipe:Array = []
+
+
 @onready
 var pocimaA=$CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A
 @onready
@@ -19,12 +28,26 @@ var animacionButtonC=$CanvasLayer/Control/VBoxContainer/buttons_container_down/B
 @onready
 var animacionButtonD=$CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_D/AnimationPlayer
 
+
+
 func recipe_print():
 	print(recipe)
+	if recipe.size() > pocimaDePielSuave.size():
+		print("ooops error!")
+	elif recipe.size() == pocimaDePielSuave.size():
+		if recipe == pocimaDePielSuave:
+			print("lograste!")
+		else:
+			print("ooops error!")
+
+	
+	
+
 
 func _on_button_a_pressed() -> void:
 	animacionButtonA.play("verter pocima")
 	recipe.append(ingridients.a)
+	
 	recipe_print()
 	
 

@@ -1,7 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqmyet1uofx8y"]
 
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://cns602t8rqrrf" path="res://scenes/cauldron.tscn" id="1_5vqgu"]
 [ext_resource type="PackedScene" uid="uid://b7hy26m6yeft1" path="res://scenes/client.tscn" id="2_l3w83"]
+=======
+[ext_resource type="PackedScene" uid="uid://by30fyxr4l4u6" path="res://scenes/cauldron.tscn" id="1_5vqgu"]
+[ext_resource type="PackedScene" path="res://scenes/client.tscn" id="2_l3w83"]
+>>>>>>> f88859f2c4b6decb0252f1a6b1edcde6ce5554aa
 
 [node name="game" type="Node"]
 

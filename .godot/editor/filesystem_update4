@@ -2,5 +2,11 @@ res://scenes/start_menu.tscn
 res://scenes/start_menu.tres
 res://scenes/game.tscn
 res://assets/start_menu.tres
+<<<<<<< HEAD
 res://scenes/cauldron.tscn
 res://scenes/client.tscn
+=======
+res://scenes/start_menu.tscn
+res://scenes/cauldron.tscn
+res://addons/dialogic/Core/DialogicGameHandler.gd
+>>>>>>> f88859f2c4b6decb0252f1a6b1edcde6ce5554aa

@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=3 uid="uid://cns602t8rqrrf"]
+
+[ext_resource type="Texture2D" uid="uid://ca4wh7ryvc8v4" path="res://icon.svg" id="1_oqi4o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_flfaj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_oqi4o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="cauldron" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+modulate = Color(0.0475577, 0.0475576, 0.0475576, 1)
+position = Vector2(936.5, 521)
+scale = Vector2(15.6328, 9.14063)
+texture = ExtResource("1_oqi4o")
+
+[node name="sprite_cauldron" type="AnimatedSprite2D" parent="."]
+position = Vector2(966, 521)
+sprite_frames = SubResource("SpriteFrames_flfaj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -405.0
+offset_top = -282.0
+offset_right = 405.0
+offset_bottom = 336.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 300
+
+[node name="buttons_container_up" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 600
+
+[node name="Button_A" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button_B" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="buttons_container_down" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 600
+
+[node name="Button_C" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button_D" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 8

@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://dqmyet1uofx8y"]
+[gd_scene load_steps=3 format=3 uid="uid://dqmyet1uofx8y"]
 
-[node name="game" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://cns602t8rqrrf" path="res://scenes/cauldron.tscn" id="1_5vqgu"]
+[ext_resource type="PackedScene" uid="uid://b7hy26m6yeft1" path="res://scenes/client.tscn" id="2_l3w83"]
+
+[node name="game" type="Node"]
+
+[node name="cauldron" parent="." instance=ExtResource("1_5vqgu")]
+
+[node name="client" parent="." instance=ExtResource("2_l3w83")]

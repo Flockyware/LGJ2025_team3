@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7qayxloitjob"
+path="res://.godot/imported/Reaccion de agregar orine de chiguire.wav-b00318da93f6aef06c7996baa84fda39.sample"
+
+[deps]
+
+source_file="res://assets/caldero/Reaccion de agregar orine de chiguire.wav"
+dest_files=["res://.godot/imported/Reaccion de agregar orine de chiguire.wav-b00318da93f6aef06c7996baa84fda39.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

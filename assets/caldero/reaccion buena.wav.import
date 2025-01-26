@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://wnryca304e8l"
+path="res://.godot/imported/reaccion buena.wav-c12d8da2445a8df315ed0bf408675413.sample"
+
+[deps]
+
+source_file="res://assets/caldero/reaccion buena.wav"
+dest_files=["res://.godot/imported/reaccion buena.wav-c12d8da2445a8df315ed0bf408675413.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,7 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://b7hy26m6yeft1"]
+[gd_scene load_steps=27 format=3 uid="uid://b7hy26m6yeft1"]
 
 [ext_resource type="Texture2D" uid="uid://c3ystqcp35tbd" path="res://assets/cliente/fondoBonitp.webp" id="1_j3puu"]
-[ext_resource type="Script" path="res://scenes/client.gd" id="1_tvcck"]
+[ext_resource type="Script" path="res://scripts/client.gd" id="1_tvcck"]
 [ext_resource type="Texture2D" uid="uid://celwmfti0j3sk" path="res://assets/cliente/P2 c.png" id="3_ih1pk"]
 [ext_resource type="Texture2D" uid="uid://58vfq4r4xi1e" path="res://assets/cliente/P2 d.png" id="4_kr6bt"]
 [ext_resource type="Texture2D" uid="uid://c78g0db0c2wqk" path="res://assets/cliente/P2 g.png" id="5_450kt"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b5cjj4n7gwsq1" path="res://assets/cliente/P2 f.png" id="6_stiq5"]
 [ext_resource type="Texture2D" uid="uid://cqbpv6m27fqd8" path="res://assets/cliente/iconoChiwire.png" id="7_kouxx"]
 [ext_resource type="Texture2D" uid="uid://brymasc7kav8g" path="res://assets/cliente/iconoCorazon.png" id="8_1texd"]
+[ext_resource type="Texture2D" uid="uid://blhdm53yotwmd" path="res://assets/cliente/iconoFlor.png" id="9_6p2dm"]
 [ext_resource type="Texture2D" uid="uid://dekltoc4srm5" path="res://assets/cliente/iconoLuna.png" id="9_yu3ds"]
 [ext_resource type="Theme" uid="uid://dq18l0hyb3bqt" path="res://addons/dialogue_nodes/themes/bubblyClean.theme" id="10_oet1j"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="11_av554"]
@@ -16,6 +17,128 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="13_8einr"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBubble.gd" id="14_cw7d6"]
 [ext_resource type="Resource" uid="uid://mfdsmrxi1e2e" path="res://timelines/Arbolito.tres" id="16_3a3hd"]
+[ext_resource type="AudioStream" uid="uid://c5jquvfsflkdw" path="res://assets/cliente/Voz del gato.wav" id="17_5xges"]
+
+[sub_resource type="Animation" id="Animation_5uace"]
+resource_name = "saltico2.0"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0, 0.674, -0.25, 0, 0.25, 0, 0.673516, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.233333, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0, 0.799, -0.25, 0, 0.25, 0, 0.673516, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.233333, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0, 411, -0.25, 0, 0.25, 0, 411, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.233333, 0.5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0, 608.5, -0.25, 0, 0.25, 0, 652, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.233333, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_vpfi6"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ey6ud"]
+_data = {
+"RESET": SubResource("Animation_vpfi6"),
+"saltico2.0": SubResource("Animation_5uace")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hj3kr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_1texd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yu3ds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6p2dm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kouxx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyc1b"]
 bg_color = Color(0.164706, 0.0666667, 0.54902, 1)
@@ -42,15 +165,15 @@ position = Vector2(411, 652)
 scale = Vector2(0.673516, 0.673516)
 texture = ExtResource("3_ih1pk")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="P2C"]
+libraries = {
+"": SubResource("AnimationLibrary_ey6ud")
+}
+
 [node name="P2D" type="Sprite2D" parent="."]
 position = Vector2(958.644, 907)
 scale = Vector2(0.770115, 0.770115)
 texture = ExtResource("4_kr6bt")
-
-[node name="P2G" type="Sprite2D" parent="."]
-position = Vector2(1068, 288)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("5_450kt")
 
 [node name="P2E" type="Sprite2D" parent="."]
 position = Vector2(1356.06, 897.625)
@@ -62,17 +185,23 @@ position = Vector2(1683, 625)
 scale = Vector2(0.76, 0.76)
 texture = ExtResource("6_stiq5")
 
-[node name="IconoChiwire" type="Sprite2D" parent="."]
-position = Vector2(1361, 966)
-texture = ExtResource("7_kouxx")
+[node name="iconoAnimado1" type="AnimatedSprite2D" parent="."]
+position = Vector2(1161, 964)
+sprite_frames = SubResource("SpriteFrames_hj3kr")
+frame = 1
+frame_progress = 0.865514
 
-[node name="IconoCorazon" type="Sprite2D" parent="."]
-position = Vector2(1522, 977)
-texture = ExtResource("8_1texd")
+[node name="iconoAnimado2" type="AnimatedSprite2D" parent="."]
+position = Vector2(1338, 974)
+sprite_frames = SubResource("SpriteFrames_hj3kr")
+frame = 1
+frame_progress = 0.865514
 
-[node name="IconoLuna" type="Sprite2D" parent="."]
-position = Vector2(1186, 969)
-texture = ExtResource("9_yu3ds")
+[node name="iconoAnimado3" type="AnimatedSprite2D" parent="."]
+position = Vector2(1528, 960)
+sprite_frames = SubResource("SpriteFrames_hj3kr")
+frame = 1
+frame_progress = 0.865514
 
 [node name="Button" type="Button" parent="."]
 offset_top = 111.0
@@ -86,21 +215,38 @@ text = "caldero"
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
-[node name="DialogueBubble" type="RichTextLabel" parent="."]
+[node name="P2G" type="Sprite2D" parent="."]
+position = Vector2(1068, 288)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_450kt")
+
+[node name="DialogueBubble" type="RichTextLabel" parent="P2G"]
 clip_contents = false
-offset_left = 779.0
-offset_top = 123.0
-offset_right = 919.0
-offset_bottom = 146.0
+custom_minimum_size = Vector2(774.765, 441.675)
+layout_direction = 2
+offset_left = -389.0
+offset_top = -237.0
+offset_right = 385.765
+offset_bottom = 204.675
 theme = ExtResource("10_oet1j")
 bbcode_enabled = true
 text = "Sample dialogue."
 fit_content = true
-autowrap_mode = 0
+autowrap_mode = 2
+tab_size = 24
 custom_effects = [SubResource("RichTextEffect_ljijj"), SubResource("RichTextEffect_giphg"), SubResource("RichTextEffect_qdurd")]
 script = ExtResource("14_cw7d6")
 data = ExtResource("16_3a3hd")
+bubble_offset = 100
 tail_color = Color(0.133333, 0.133333, 0.133333, 0)
 dialogue_custom_effects = [SubResource("RichTextEffect_ljijj"), SubResource("RichTextEffect_giphg"), SubResource("RichTextEffect_qdurd")]
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_5xges")
+volume_db = 10.0
+max_distance = 1700.0
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="dialogue_ended" from="P2G/DialogueBubble" to="." method="_on_dialogue_bubble_dialogue_ended"]
+[connection signal="dialogue_processed" from="P2G/DialogueBubble" to="." method="_on_dialogue_bubble_dialogue_processed"]
+[connection signal="dialogue_signal" from="P2G/DialogueBubble" to="." method="_on_dialogue_bubble_dialogue_signal"]

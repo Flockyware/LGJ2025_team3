@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=3 uid="uid://cns602t8rqrrf"]
 
-[ext_resource type="Script" path="res://scenes/cauldron.gd" id="1_fypk7"]
+[ext_resource type="Script" path="res://scripts/cauldron.gd" id="1_fypk7"]
 [ext_resource type="Texture2D" uid="uid://byisqpddkdge7" path="res://assets/caldero/fondoNoche.webp" id="2_28spt"]
 [ext_resource type="Texture2D" uid="uid://qgyrdcqgc0ra" path="res://assets/caldero/caldero.png" id="2_chyaa"]
 [ext_resource type="Texture2D" uid="uid://b8gqu8s3igmt" path="res://assets/caldero/mesa.png" id="3_d6mtc"]

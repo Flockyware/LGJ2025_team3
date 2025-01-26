@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dicf4b11t4dby"
+path="res://.godot/imported/Reaccion de agregar un ingrediente.wav-983d49a6c5f090af039e6ac106a440ef.sample"
+
+[deps]
+
+source_file="res://assets/caldero/Reaccion de agregar un ingrediente.wav"
+dest_files=["res://.godot/imported/Reaccion de agregar un ingrediente.wav-983d49a6c5f090af039e6ac106a440ef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

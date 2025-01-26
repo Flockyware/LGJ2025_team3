@@ -99,7 +99,7 @@ signal dialogue_ended
 			button.pressed.connect(select_option.bind(idx))
 		options_container.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
 		options_container.set_offsets_preset(Control.PRESET_CENTER_BOTTOM)
-		options_container.position.y = 32
+		options_container.position.y = 500
 ## Icon displayed when no text options are available.
 @export var next_icon := preload('res://addons/dialogue_nodes/icons/Play.svg')
 
@@ -164,7 +164,7 @@ func _enter_tree():
 	max_options_count = max_options_count
 	options_container.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
 	options_container.set_offsets_preset(Control.PRESET_CENTER_BOTTOM)
-	options_container.position.y = 32
+	options_container.position.y = 500
 	
 	_visible_on_screen_notifier = VisibleOnScreenNotifier3D.new()
 	add_child(_visible_on_screen_notifier)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b7hy26m6yeft1"]
+[gd_scene load_steps=26 format=3 uid="uid://b7hy26m6yeft1"]
 
 [ext_resource type="Texture2D" uid="uid://c3ystqcp35tbd" path="res://assets/cliente/fondoBonitp.webp" id="1_j3puu"]
 [ext_resource type="Script" path="res://scenes/client.gd" id="1_tvcck"]
@@ -14,21 +14,12 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="11_av554"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="12_ngksv"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="13_8einr"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBubble.gd" id="14_cw7d6"]
 [ext_resource type="Resource" uid="uid://mfdsmrxi1e2e" path="res://timelines/Arbolito.tres" id="16_3a3hd"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="17_4nvsw"]
+[ext_resource type="Texture2D" uid="uid://blhdm53yotwmd" path="res://assets/cliente/iconoFlor.png" id="17_v4ij8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyc1b"]
 bg_color = Color(0.164706, 0.0666667, 0.54902, 1)
-
-[sub_resource type="RichTextEffect" id="RichTextEffect_ljijj"]
-script = ExtResource("11_av554")
-
-[sub_resource type="RichTextEffect" id="RichTextEffect_giphg"]
-script = ExtResource("12_ngksv")
-
-[sub_resource type="RichTextEffect" id="RichTextEffect_qdurd"]
-script = ExtResource("13_8einr")
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_jftfc"]
 script = ExtResource("11_av554")
@@ -100,6 +91,26 @@ _data = {
 "gatonimaciones": SubResource("Animation_sd77p")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_jpdhx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_kouxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1texd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_v4ij8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yu3ds")
+}],
+"loop": true,
+"name": &"figuras",
+"speed": 5.0
+}]
+
 [node name="client" type="Node2D"]
 script = ExtResource("1_tvcck")
 
@@ -134,18 +145,6 @@ position = Vector2(1683, 625)
 scale = Vector2(0.76, 0.76)
 texture = ExtResource("6_stiq5")
 
-[node name="IconoChiwire" type="Sprite2D" parent="."]
-position = Vector2(1361, 966)
-texture = ExtResource("7_kouxx")
-
-[node name="IconoCorazon" type="Sprite2D" parent="."]
-position = Vector2(1522, 977)
-texture = ExtResource("8_1texd")
-
-[node name="IconoLuna" type="Sprite2D" parent="."]
-position = Vector2(1186, 969)
-texture = ExtResource("9_yu3ds")
-
 [node name="Button" type="Button" parent="."]
 offset_top = 111.0
 offset_right = 299.0
@@ -157,25 +156,6 @@ button_mask = 3
 text = "caldero"
 
 [node name="Marker2D" type="Marker2D" parent="."]
-
-[node name="DialogueBubble" type="RichTextLabel" parent="."]
-visible = false
-clip_contents = false
-offset_left = 656.0
-offset_top = 305.0
-offset_right = 1633.0
-offset_bottom = 569.0
-theme = ExtResource("10_oet1j")
-bbcode_enabled = true
-text = "Sample dialogue.
-"
-fit_content = true
-autowrap_mode = 0
-custom_effects = [SubResource("RichTextEffect_ljijj"), SubResource("RichTextEffect_giphg"), SubResource("RichTextEffect_qdurd")]
-script = ExtResource("14_cw7d6")
-data = ExtResource("16_3a3hd")
-tail_color = Color(0.133333, 0.133333, 0.133333, 0)
-dialogue_custom_effects = [SubResource("RichTextEffect_ljijj"), SubResource("RichTextEffect_giphg"), SubResource("RichTextEffect_qdurd")]
 
 [node name="DialogueBox" type="Panel" parent="."]
 offset_left = 597.0
@@ -192,5 +172,21 @@ libraries = {
 "": SubResource("AnimationLibrary_wg4kv")
 }
 
+[node name="figuras" type="AnimatedSprite2D" parent="."]
+position = Vector2(1168, 1029)
+sprite_frames = SubResource("SpriteFrames_jpdhx")
+animation = &"figuras"
+
+[node name="figuras2" type="AnimatedSprite2D" parent="."]
+position = Vector2(1355, 971)
+sprite_frames = SubResource("SpriteFrames_jpdhx")
+animation = &"figuras"
+
+[node name="figuras3" type="AnimatedSprite2D" parent="."]
+position = Vector2(1522, 1031)
+sprite_frames = SubResource("SpriteFrames_jpdhx")
+animation = &"figuras"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="dialogue_ended" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_ended"]
 [connection signal="dialogue_signal" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]

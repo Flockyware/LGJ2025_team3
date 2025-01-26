@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=3 format=3 uid="uid://cixrtwrc76fw1"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_vg4gk"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="4_41s0k"]
+
+[resource]
+script = ExtResource("4_41s0k")
+name = "OMAIGOT"
+base_overrides = {}
+layers = Array[ExtResource("1_vg4gk")]([])
+metadata/_latest_layer = ""

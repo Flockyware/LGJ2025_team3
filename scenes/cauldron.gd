@@ -18,15 +18,17 @@ var recipe:Array = []
 
 
 @onready
-var pocimaA=$CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A
+var pocimaA=$interfaz/Control/VBoxContainer/buttons_container_up/Button_A
 @onready
-var animacionButtonA=$CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A/AnimationPlayer
+var animacionButtonA=$interfaz/Control/VBoxContainer/buttons_container_up/Button_A/AnimationPlayer
 @onready
-var animacionButtonB=$CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_B/AnimationPlayer
+var animacionButtonB=$interfaz/Control/VBoxContainer/buttons_container_up/Button_B/AnimationPlayer
 @onready
-var animacionButtonC=$CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_C/AnimationPlayer
+var animacionButtonC=$interfaz/Control/VBoxContainer/buttons_container_down/Button_C/AnimationPlayer
 @onready
-var animacionButtonD=$CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_D/AnimationPlayer
+var animacionButtonD=$interfaz/Control/VBoxContainer/buttons_container_down/Button_D/AnimationPlayer
+
+signal mover_a_cliente
 
 
 
@@ -70,7 +72,10 @@ func _on_button_a_mouse_entered() -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/client.tscn")
+	emit_signal("mover_a_cliente")
+	#comento esta linea de codigo para intentar hacer la transicion de movimiento 
+	#get_tree().change_scene_to_file("res://scenes/client.tscn")
+	pass
 
 
 	

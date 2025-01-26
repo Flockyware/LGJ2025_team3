@@ -1,11 +1,108 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqmyet1uofx8y"]
+[gd_scene load_steps=8 format=3 uid="uid://dqmyet1uofx8y"]
 
 [ext_resource type="PackedScene" uid="uid://cns602t8rqrrf" path="res://scenes/cauldron.tscn" id="1_5vqgu"]
+[ext_resource type="Script" path="res://scripts/main_script.gd" id="1_psx8q"]
 [ext_resource type="PackedScene" uid="uid://b7hy26m6yeft1" path="res://scenes/client.tscn" id="2_l3w83"]
 
+[sub_resource type="Animation" id="Animation_n6aaa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cauldron:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("client:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1931, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_22dmv"]
+resource_name = "to_cauldron"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cauldron:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 3.99),
+"update": 0,
+"values": [Vector2(-1930, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("client:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 3.99),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1931, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_feh7a"]
+resource_name = "to_client"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cauldron:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 3.99),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1930, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("client:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 4),
+"update": 0,
+"values": [Vector2(1931, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_afo2f"]
+_data = {
+"RESET": SubResource("Animation_n6aaa"),
+"to_cauldron": SubResource("Animation_22dmv"),
+"to_client": SubResource("Animation_feh7a")
+}
+
 [node name="game" type="Node"]
+script = ExtResource("1_psx8q")
 
 [node name="cauldron" parent="." instance=ExtResource("1_5vqgu")]
 
 [node name="client" parent="." instance=ExtResource("2_l3w83")]
-position = Vector2(2713.84, 14)
+position = Vector2(1931, 0)
+
+[node name="Transitions" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_afo2f")
+}
+
+[connection signal="mover_a_cliente" from="cauldron" to="." method="_on_cauldron_mover_a_cliente"]

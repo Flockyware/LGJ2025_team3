@@ -364,8 +364,8 @@ scale = Vector2(2.878, 1.685)
 texture = ExtResource("2_28spt")
 
 [node name="Mesa" type="Sprite2D" parent="."]
-position = Vector2(966, 717)
-scale = Vector2(0.8, 0.8)
+position = Vector2(983, 717)
+scale = Vector2(0.7864, 0.8)
 texture = ExtResource("3_d6mtc")
 
 [node name="sprite_cauldron" type="AnimatedSprite2D" parent="."]
@@ -374,29 +374,35 @@ rotation = -0.0174533
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_flfaj")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="interfaz" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="interfaz"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1884.0
+offset_bottom = 1091.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="CanvasLayer/Control"]
+[node name="Button" type="Button" parent="interfaz/Control"]
 layout_mode = 0
-offset_left = 1639.0
+offset_left = 1634.0
 offset_top = 109.0
-offset_right = 2241.0
+offset_right = 1912.0
 offset_bottom = 231.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 51
 theme_override_styles/normal = SubResource("StyleBoxFlat_cjr05")
 button_mask = 3
-text = "cliente        caldero"
+text = "cliente"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="interfaz/Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -411,12 +417,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 300
 
-[node name="buttons_container_up" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
+[node name="buttons_container_up" type="HBoxContainer" parent="interfaz/Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 600
 
-[node name="Button_A" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up"]
+[node name="Button_A" type="Button" parent="interfaz/Control/VBoxContainer/buttons_container_up"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ce6yh")
@@ -425,17 +431,17 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A"]
+[node name="Sprite2D" type="Sprite2D" parent="interfaz/Control/VBoxContainer/buttons_container_up/Button_A"]
 position = Vector2(73.635, 66.69)
 scale = Vector2(0.37, 0.37)
 texture = ExtResource("4_mstxl")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="interfaz/Control/VBoxContainer/buttons_container_up/Button_A"]
 libraries = {
 "": SubResource("AnimationLibrary_s6r6e")
 }
 
-[node name="Button_B" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up"]
+[node name="Button_B" type="Button" parent="interfaz/Control/VBoxContainer/buttons_container_up"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -445,23 +451,23 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_B"]
+[node name="Sprite2D" type="Sprite2D" parent="interfaz/Control/VBoxContainer/buttons_container_up/Button_B"]
 position = Vector2(79, 75)
 scale = Vector2(0.37, 0.37)
 texture = ExtResource("5_o0lnv")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_B"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="interfaz/Control/VBoxContainer/buttons_container_up/Button_B"]
 root_node = NodePath("../Sprite2D")
 libraries = {
 "": SubResource("AnimationLibrary_t5nlc")
 }
 
-[node name="buttons_container_down" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
+[node name="buttons_container_down" type="HBoxContainer" parent="interfaz/Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 600
 
-[node name="Button_C" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down"]
+[node name="Button_C" type="Button" parent="interfaz/Control/VBoxContainer/buttons_container_down"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_43lif")
@@ -469,17 +475,17 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_b5sk1")
 flat = true
 icon_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_C"]
+[node name="Sprite2D" type="Sprite2D" parent="interfaz/Control/VBoxContainer/buttons_container_down/Button_C"]
 position = Vector2(70, 70)
 scale = Vector2(0.395, 0.395)
 texture = ExtResource("6_6wn1w")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_C"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="interfaz/Control/VBoxContainer/buttons_container_down/Button_C"]
 libraries = {
 "": SubResource("AnimationLibrary_7m4h1")
 }
 
-[node name="Button_D" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down"]
+[node name="Button_D" type="Button" parent="interfaz/Control/VBoxContainer/buttons_container_down"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -489,19 +495,19 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_D"]
+[node name="Sprite2D" type="Sprite2D" parent="interfaz/Control/VBoxContainer/buttons_container_down/Button_D"]
 position = Vector2(72.53, 64.675)
 scale = Vector2(0.49, 0.49)
 texture = ExtResource("7_v2anf")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="interfaz/Control/VBoxContainer/buttons_container_down/Button_D"]
 libraries = {
 "": SubResource("AnimationLibrary_g0om0")
 }
 
-[connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="_on_button_pressed"]
-[connection signal="mouse_entered" from="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_mouse_entered"]
-[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/buttons_container_up/Button_B" to="." method="_on_button_b_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_C" to="." method="_on_button_c_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/buttons_container_down/Button_D" to="." method="_on_button_d_pressed"]
+[connection signal="pressed" from="interfaz/Control/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_mouse_entered"]
+[connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_B" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_down/Button_C" to="." method="_on_button_c_pressed"]
+[connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_down/Button_D" to="." method="_on_button_d_pressed"]

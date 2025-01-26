@@ -8,9 +8,9 @@ const MAX_RECIPE:int = 3
 
 var requested_recipe:Array = []
 
-@onready var iconoReceta1=$iconoAnimado1
-@onready var iconoReceta2=$iconoAnimado2
-@onready var iconoReceta3=$iconoAnimado3
+@onready var iconoReceta1=$P2E/iconoAnimado1
+@onready var iconoReceta2=$P2E/iconoAnimado2
+@onready var iconoReceta3=$P2E/iconoAnimado3
 
 
 # Called when the node enters the scene tree for the first time.
@@ -60,6 +60,9 @@ func _on_dialogue_bubble_dialogue_signal(value: String) -> void:
 
 func _on_dialogue_bubble_dialogue_ended() -> void:
 	$AudioStreamPlayer2D.stop()
+	$P2E/AnimationPlayer.play("moverLibreta")
+	$P2C/AnimationPlayer.play("centrarGato")
+	$P2G.visible=false
 	match requested_recipe[0]:
 		"a":
 			iconoReceta1.frame=0

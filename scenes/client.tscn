@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b7hy26m6yeft1"]
+[gd_scene load_steps=31 format=3 uid="uid://b7hy26m6yeft1"]
 
 [ext_resource type="Texture2D" uid="uid://c3ystqcp35tbd" path="res://assets/cliente/fondoBonitp.webp" id="1_j3puu"]
 [ext_resource type="Script" path="res://scripts/client.gd" id="1_tvcck"]
@@ -114,9 +114,35 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0)
 }
 
+[sub_resource type="Animation" id="Animation_y56jf"]
+resource_name = "centrarGato"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0, 599.615, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0, 619.12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ey6ud"]
 _data = {
 "RESET": SubResource("Animation_vpfi6"),
+"centrarGato": SubResource("Animation_y56jf"),
 "saltico2.0": SubResource("Animation_5uace")
 }
 
@@ -139,6 +165,106 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_ur4k0"]
+resource_name = "moverLibreta"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1356.06, -0.25, 0, 0.25, 0, 1093.08, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(897.625, -0.25, 0, 0.25, 0, 859.995, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.637002, -0.25, 0, 0.25, 0, 0.637, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.637001, -0.25, 0, 0.25, 0, 0.717, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_nr37n"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1356.06, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(897.625, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.637002, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.637001, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dl4t8"]
+_data = {
+"RESET": SubResource("Animation_nr37n"),
+"moverLibreta": SubResource("Animation_ur4k0")
+}
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyc1b"]
 bg_color = Color(0.164706, 0.0666667, 0.54902, 1)
@@ -180,28 +306,36 @@ position = Vector2(1356.06, 897.625)
 scale = Vector2(0.637002, 0.637001)
 texture = ExtResource("5_nyljq")
 
+[node name="iconoAnimado1" type="AnimatedSprite2D" parent="P2E"]
+position = Vector2(-306.216, 104.199)
+scale = Vector2(1.56985, 1.56986)
+sprite_frames = SubResource("SpriteFrames_hj3kr")
+frame = 1
+frame_progress = 0.865514
+
+[node name="iconoAnimado2" type="AnimatedSprite2D" parent="P2E"]
+position = Vector2(-28.3516, 119.898)
+scale = Vector2(1.56985, 1.56986)
+sprite_frames = SubResource("SpriteFrames_hj3kr")
+frame = 1
+frame_progress = 0.865514
+
+[node name="iconoAnimado3" type="AnimatedSprite2D" parent="P2E"]
+position = Vector2(269.921, 97.9198)
+scale = Vector2(1.56985, 1.56986)
+sprite_frames = SubResource("SpriteFrames_hj3kr")
+frame = 1
+frame_progress = 0.865514
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="P2E"]
+libraries = {
+"": SubResource("AnimationLibrary_dl4t8")
+}
+
 [node name="P2F" type="Sprite2D" parent="."]
 position = Vector2(1683, 625)
 scale = Vector2(0.76, 0.76)
 texture = ExtResource("6_stiq5")
-
-[node name="iconoAnimado1" type="AnimatedSprite2D" parent="."]
-position = Vector2(1161, 964)
-sprite_frames = SubResource("SpriteFrames_hj3kr")
-frame = 1
-frame_progress = 0.865514
-
-[node name="iconoAnimado2" type="AnimatedSprite2D" parent="."]
-position = Vector2(1338, 974)
-sprite_frames = SubResource("SpriteFrames_hj3kr")
-frame = 1
-frame_progress = 0.865514
-
-[node name="iconoAnimado3" type="AnimatedSprite2D" parent="."]
-position = Vector2(1528, 960)
-sprite_frames = SubResource("SpriteFrames_hj3kr")
-frame = 1
-frame_progress = 0.865514
 
 [node name="Button" type="Button" parent="."]
 offset_top = 111.0
@@ -232,7 +366,7 @@ theme = ExtResource("10_oet1j")
 bbcode_enabled = true
 text = "Sample dialogue."
 fit_content = true
-autowrap_mode = 2
+autowrap_mode = 0
 tab_size = 24
 custom_effects = [SubResource("RichTextEffect_ljijj"), SubResource("RichTextEffect_giphg"), SubResource("RichTextEffect_qdurd")]
 script = ExtResource("14_cw7d6")

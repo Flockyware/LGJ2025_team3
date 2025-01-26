@@ -15,15 +15,14 @@ run/main_scene="res://scenes/start_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+
 [dialogic]
 
-directories/dch_directory={
-"cliente": "res://timelines/cliente.dch",
-"persona": "res://timelines/persona.dch"
-}
-directories/dtl_directory={
-"timeline": "res://timelines/timeline.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 variables={}
 glossary/default_case_sensitive=true
 layout/style_list=["res://timelines/ESTILIZADO.tres", "res://timelines/ESTILITO.tres", "res://timelines/DIOS.tres"]
@@ -53,8 +52,8 @@ text/autopauses={}
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/size/resizable=false
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 

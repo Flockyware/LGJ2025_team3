@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b7hy26m6yeft1"]
+[gd_scene load_steps=28 format=3 uid="uid://b7hy26m6yeft1"]
 
 [ext_resource type="Texture2D" uid="uid://c3ystqcp35tbd" path="res://assets/cliente/fondoBonitp.webp" id="1_j3puu"]
 [ext_resource type="Script" path="res://scenes/client.gd" id="1_tvcck"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="13_8einr"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBubble.gd" id="14_cw7d6"]
 [ext_resource type="Resource" uid="uid://mfdsmrxi1e2e" path="res://timelines/Arbolito.tres" id="16_3a3hd"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="17_4nvsw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyc1b"]
 bg_color = Color(0.164706, 0.0666667, 0.54902, 1)
@@ -29,6 +30,76 @@ script = ExtResource("12_ngksv")
 [sub_resource type="RichTextEffect" id="RichTextEffect_qdurd"]
 script = ExtResource("13_8einr")
 
+[sub_resource type="RichTextEffect" id="RichTextEffect_jftfc"]
+script = ExtResource("11_av554")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_7ntbc"]
+script = ExtResource("12_ngksv")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_ovv5g"]
+script = ExtResource("13_8einr")
+
+[sub_resource type="Animation" id="Animation_sd77p"]
+resource_name = "gatonimaciones"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("P2C:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5),
+"transitions": PackedFloat32Array(0.392292, 0.450625, 2.63902),
+"update": 0,
+"values": [Vector2(0.673516, 0.673516), Vector2(0.673516, 0.727098), Vector2(0.673516, 0.673516)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("P2C:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5),
+"transitions": PackedFloat32Array(0.3, 0.4, 2.6),
+"update": 0,
+"values": [Vector2(411, 618.163), Vector2(411, 576), Vector2(411, 618.163)]
+}
+
+[sub_resource type="Animation" id="Animation_4jap8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("P2C:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.673516, 0.673516)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("P2C:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(411, 618.163)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wg4kv"]
+_data = {
+"RESET": SubResource("Animation_4jap8"),
+"gatonimaciones": SubResource("Animation_sd77p")
+}
+
 [node name="client" type="Node2D"]
 script = ExtResource("1_tvcck")
 
@@ -38,7 +109,7 @@ scale = Vector2(2.823, 1.65)
 texture = ExtResource("1_j3puu")
 
 [node name="P2C" type="Sprite2D" parent="."]
-position = Vector2(411, 652)
+position = Vector2(411, 618.163)
 scale = Vector2(0.673516, 0.673516)
 texture = ExtResource("3_ih1pk")
 
@@ -48,8 +119,9 @@ scale = Vector2(0.770115, 0.770115)
 texture = ExtResource("4_kr6bt")
 
 [node name="P2G" type="Sprite2D" parent="."]
-position = Vector2(1068, 288)
-scale = Vector2(0.7, 0.7)
+visible = false
+position = Vector2(1103.22, 293.85)
+scale = Vector2(0.748124, 0.722743)
 texture = ExtResource("5_450kt")
 
 [node name="P2E" type="Sprite2D" parent="."]
@@ -87,14 +159,16 @@ text = "caldero"
 [node name="Marker2D" type="Marker2D" parent="."]
 
 [node name="DialogueBubble" type="RichTextLabel" parent="."]
+visible = false
 clip_contents = false
-offset_left = 779.0
-offset_top = 123.0
-offset_right = 1421.0
-offset_bottom = 468.0
+offset_left = 656.0
+offset_top = 305.0
+offset_right = 1633.0
+offset_bottom = 569.0
 theme = ExtResource("10_oet1j")
 bbcode_enabled = true
-text = "Sample dialogue."
+text = "Sample dialogue.
+"
 fit_content = true
 autowrap_mode = 0
 custom_effects = [SubResource("RichTextEffect_ljijj"), SubResource("RichTextEffect_giphg"), SubResource("RichTextEffect_qdurd")]
@@ -103,4 +177,20 @@ data = ExtResource("16_3a3hd")
 tail_color = Color(0.133333, 0.133333, 0.133333, 0)
 dialogue_custom_effects = [SubResource("RichTextEffect_ljijj"), SubResource("RichTextEffect_giphg"), SubResource("RichTextEffect_qdurd")]
 
+[node name="DialogueBox" type="Panel" parent="."]
+offset_left = 597.0
+offset_top = 254.0
+offset_right = 1596.0
+offset_bottom = 598.0
+theme = ExtResource("10_oet1j")
+script = ExtResource("17_4nvsw")
+data = ExtResource("16_3a3hd")
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_jftfc"), SubResource("RichTextEffect_7ntbc"), SubResource("RichTextEffect_ovv5g")])
+
+[node name="nims" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wg4kv")
+}
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="dialogue_signal" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]

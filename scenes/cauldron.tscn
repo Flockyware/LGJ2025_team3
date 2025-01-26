@@ -1,13 +1,15 @@
-[gd_scene load_steps=31 format=3 uid="uid://cns602t8rqrrf"]
+[gd_scene load_steps=38 format=3 uid="uid://cns602t8rqrrf"]
 
 [ext_resource type="Script" path="res://scenes/cauldron.gd" id="1_fypk7"]
 [ext_resource type="Texture2D" uid="uid://byisqpddkdge7" path="res://assets/caldero/fondoNoche.webp" id="2_28spt"]
 [ext_resource type="Texture2D" uid="uid://qgyrdcqgc0ra" path="res://assets/caldero/caldero.png" id="2_chyaa"]
 [ext_resource type="Texture2D" uid="uid://b8gqu8s3igmt" path="res://assets/caldero/mesa.png" id="3_d6mtc"]
 [ext_resource type="Texture2D" uid="uid://csnkcoev2qa34" path="res://assets/caldero/Pocion1.png" id="4_mstxl"]
+[ext_resource type="Texture2D" uid="uid://dexdo01sulcnd" path="res://assets/caldero/burbuja.png" id="5_8plih"]
 [ext_resource type="Texture2D" uid="uid://dqwsdhtbyd5u3" path="res://assets/caldero/Pocion2.png" id="5_o0lnv"]
 [ext_resource type="Texture2D" uid="uid://cryyv0ex71oyt" path="res://assets/caldero/Pocion3.png" id="6_6wn1w"]
 [ext_resource type="Texture2D" uid="uid://4xvf2tppjjyb" path="res://assets/caldero/Pocion4.png" id="7_v2anf"]
+[ext_resource type="AudioStream" uid="uid://btrjiqfdjrpf1" path="res://assets/caldero/sonidos/Olla hirviendo 2_rango1.mp3" id="9_y0fvj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_flfaj"]
 animations = [{
@@ -19,6 +21,32 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Curve" id="Curve_nwjsb"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0.0316901, -200), 0.0, 0.0, 0, 0, Vector2(0.598592, -153.868), 400.279, 400.279, 0, 0, Vector2(0.926056, 200), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_lpkqr"]
+curve = SubResource("Curve_nwjsb")
+
+[sub_resource type="Curve" id="Curve_fxygl"]
+_data = [Vector2(0.0246479, 0), 0.0, 0.0, 0, 0, Vector2(0.524648, 0.459885), -1.48764, -1.48764, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_1s5pr"]
+curve = SubResource("Curve_fxygl")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hnobt"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(300, 160, 1)
+angle_min = 1.07288e-05
+angle_max = 1.07288e-05
+gravity = Vector3(0, -98, 0)
+linear_accel_curve = SubResource("CurveTexture_lpkqr")
+scale_curve = SubResource("CurveTexture_1s5pr")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cjr05"]
 bg_color = Color(0.94902, 0.862745, 0.760784, 1)
@@ -362,11 +390,13 @@ script = ExtResource("1_fypk7")
 position = Vector2(972, 318)
 scale = Vector2(2.878, 1.685)
 texture = ExtResource("2_28spt")
+metadata/_edit_lock_ = true
 
 [node name="Mesa" type="Sprite2D" parent="."]
 position = Vector2(983, 717)
 scale = Vector2(0.7864, 0.8)
 texture = ExtResource("3_d6mtc")
+metadata/_edit_lock_ = true
 
 [node name="sprite_cauldron" type="AnimatedSprite2D" parent="."]
 position = Vector2(966, 521)
@@ -374,11 +404,21 @@ rotation = -0.0174533
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_flfaj")
 
+[node name="particulas" type="GPUParticles2D" parent="sprite_cauldron"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(17.3454, -229.732)
+amount = 5
+process_material = SubResource("ParticleProcessMaterial_hnobt")
+texture = ExtResource("5_8plih")
+lifetime = 3.0
+
 [node name="interfaz" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="Control" type="Control" parent="interfaz"]
 layout_mode = 1
@@ -504,6 +544,16 @@ texture = ExtResource("7_v2anf")
 libraries = {
 "": SubResource("AnimationLibrary_g0om0")
 }
+
+[node name="sonido caldero burbujeante" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(945, 571)
+stream = ExtResource("9_y0fvj")
+volume_db = 10.0
+autoplay = true
+max_distance = 1700.0
+attenuation = 0.574349
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [connection signal="pressed" from="interfaz/Control/Button" to="." method="_on_button_pressed"]
 [connection signal="mouse_entered" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_mouse_entered"]

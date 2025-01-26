@@ -13,7 +13,8 @@ var requested_recipe:Array = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$DialogueBubble.start("quesito")
+	#$DialogueBubble.start("gat1")
+	$DialogueBox.start("gat1")
 	#var layout = Dialogic.start("res://timelines/timeline.dtl")
 	#layout.register_character(queso, $Marker2D)
 	
@@ -44,3 +45,8 @@ func set_random_ingridient():
 		else:
 			requested_recipe.append("d")
 		pass
+
+
+func _on_dialogue_box_dialogue_signal(value):
+	if value == "saltico":
+		$nims.play("gatonimaciones")

@@ -1,8 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://cns602t8rqrrf"]
+[gd_scene load_steps=30 format=3 uid="uid://cns602t8rqrrf"]
 
 [ext_resource type="Script" path="res://scenes/cauldron.gd" id="1_fypk7"]
+[ext_resource type="Texture2D" uid="uid://c3ystqcp35tbd" path="res://assets/fondoBonitp.webp" id="2_5inuu"]
 [ext_resource type="Texture2D" uid="uid://qgyrdcqgc0ra" path="res://assets/caldero.png" id="2_chyaa"]
-[ext_resource type="Texture2D" uid="uid://c5mbbjd45ppl2" path="res://assets/fondo.png" id="2_wvso6"]
 [ext_resource type="Texture2D" uid="uid://b8gqu8s3igmt" path="res://assets/mesa.png" id="3_d6mtc"]
 [ext_resource type="Texture2D" uid="uid://csnkcoev2qa34" path="res://assets/Pocion1.png" id="4_mstxl"]
 [ext_resource type="Texture2D" uid="uid://dqwsdhtbyd5u3" path="res://assets/Pocion2.png" id="5_o0lnv"]
@@ -19,6 +19,10 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ce6yh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_51umd"]
 
 [sub_resource type="Animation" id="Animation_xum38"]
 length = 0.001
@@ -99,6 +103,10 @@ _data = {
 "verter pocima": SubResource("Animation_e50d3")
 }
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d02hx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjt4a"]
+
 [sub_resource type="Animation" id="Animation_bt3v7"]
 resource_name = "verterPocima2"
 length = 2.0
@@ -178,6 +186,10 @@ _data = {
 "verterPocima2": SubResource("Animation_bt3v7")
 }
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_43lif"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b5sk1"]
+
 [sub_resource type="Animation" id="Animation_syp3r"]
 resource_name = "verterPocima3"
 length = 2.0
@@ -256,6 +268,10 @@ _data = {
 "RESET": SubResource("Animation_d3dj7"),
 "verterPocima3": SubResource("Animation_syp3r")
 }
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3uts"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_he8h3"]
 
 [sub_resource type="Animation" id="Animation_ikwyp"]
 resource_name = "verterPocima4"
@@ -340,13 +356,12 @@ _data = {
 script = ExtResource("1_fypk7")
 
 [node name="background" type="Sprite2D" parent="."]
-modulate = Color(0.0475577, 0.0475576, 0.0475576, 1)
-position = Vector2(936.5, 521)
-scale = Vector2(1.383, 0.809)
-texture = ExtResource("2_wvso6")
+position = Vector2(972, 318)
+scale = Vector2(1.828, 1.07)
+texture = ExtResource("2_5inuu")
 
 [node name="Mesa" type="Sprite2D" parent="."]
-position = Vector2(953, 581.34)
+position = Vector2(966, 717)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_d6mtc")
 
@@ -389,6 +404,8 @@ theme_override_constants/separation = 600
 [node name="Button_A" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_up"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ce6yh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_51umd")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -407,6 +424,8 @@ libraries = {
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d02hx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xjt4a")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -430,6 +449,8 @@ theme_override_constants/separation = 600
 [node name="Button_C" type="Button" parent="CanvasLayer/Control/VBoxContainer/buttons_container_down"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_43lif")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_b5sk1")
 flat = true
 icon_alignment = 1
 
@@ -447,6 +468,8 @@ libraries = {
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w3uts")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_he8h3")
 flat = true
 icon_alignment = 1
 expand_icon = true

@@ -40,14 +40,11 @@ func recipe_print():
 		else:
 			print("ooops error!")
 
-	
-	
 
 
 func _on_button_a_pressed() -> void:
 	animacionButtonA.play("verter pocima")
 	recipe.append(ingridients.a)
-	
 	recipe_print()
 	
 

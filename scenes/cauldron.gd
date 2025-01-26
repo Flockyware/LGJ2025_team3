@@ -8,6 +8,7 @@ var ingridients = {
 	"c":"c",
 	"d":"d",
 }
+@onready var client: Node2D = $"../client"
 
 # pocimas
 var pocimaDePielSuave:Array=["b","d","a"]
@@ -34,10 +35,10 @@ signal mover_a_cliente
 
 func recipe_print():
 	print(recipe)
-	if recipe.size() > pocimaDePielSuave.size():
+	if recipe.size() > client.requested_recipe.size():
 		print("ooops error!")
-	elif recipe.size() == pocimaDePielSuave.size():
-		if recipe == pocimaDePielSuave:
+	elif recipe.size() == client.requested_recipe.size():
+		if recipe == client.requested_recipe:
 			print("lograste!")
 		else:
 			print("ooops error!")

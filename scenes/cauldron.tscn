@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://du61toynmu3v3"]
+[gd_scene load_steps=42 format=3 uid="uid://cns602t8rqrrf"]
 
 [ext_resource type="Script" path="res://scripts/cauldron.gd" id="1_fypk7"]
 [ext_resource type="Texture2D" uid="uid://byisqpddkdge7" path="res://assets/caldero/fondoNoche.webp" id="2_28spt"]
@@ -627,16 +627,19 @@ metadata/_edit_group_ = true
 
 [node name="button_a_sfx" type="AudioStreamPlayer2D" parent="sfx"]
 stream = ExtResource("11_fgwrf")
-bus = &"SFX"
+volume_db = 10.0
 
 [node name="button_b_sfx" type="AudioStreamPlayer2D" parent="sfx"]
 stream = ExtResource("12_txe7y")
+volume_db = 15.0
 
 [node name="button_c_sfx" type="AudioStreamPlayer2D" parent="sfx"]
 stream = ExtResource("13_bj1cb")
+volume_db = 10.0
 
 [node name="button_d_sfx" type="AudioStreamPlayer2D" parent="sfx"]
 stream = ExtResource("14_fn0rq")
+volume_db = 10.0
 
 [connection signal="pressed" from="interfaz/Control/Button" to="." method="_on_button_pressed"]
 [connection signal="mouse_entered" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_mouse_entered"]

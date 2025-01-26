@@ -3,7 +3,7 @@ extends Node
 @onready var transiciones:AnimationPlayer = $Transitions
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	transiciones.play("to_client")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

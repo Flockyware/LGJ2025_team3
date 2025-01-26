@@ -73,7 +73,9 @@ func _on_button_a_mouse_entered() -> void:
 
 
 func _on_button_pressed() -> void:
+	
 	emit_signal("mover_a_cliente")
+	
 	#comento esta linea de codigo para intentar hacer la transicion de movimiento 
 	#get_tree().change_scene_to_file("res://scenes/client.tscn")
 	pass

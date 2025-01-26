@@ -5,30 +5,65 @@
 [resource]
 script = ExtResource("1_vp01j")
 starts = {
-"quesito": &"0_1"
+"gat1": &"0_1"
 }
 nodes = {
 "0_1": {
 "link": &"1_1",
-"offset": Vector2(-400, -180),
-"start_id": "quesito"
+"offset": Vector2(-1060, -200),
+"start_id": "gat1"
+},
+"0_2": {
+"link": "END",
+"offset": Vector2(-720, 320),
+"start_id": "bruj1"
 },
 "1_1": {
-"dialogue": "puedes creer que hay mucho texto que poner y tan poco tiempo??????",
-"offset": Vector2(-140, -180),
+"dialogue": "   Por fin te encuentro. Tienes que ayudarmiau :(    ",
+"offset": Vector2(-460, -200),
 "options": {
 0: {
 "condition": {},
-"link": "END",
-"text": ""
+"link": &"3_1",
+"text": "Que te ocurre Gatoyobro? La piel se te ve un tanto seca "
 }
 },
 "size": Vector2(300, 240),
-"speaker": ""
+"speaker": "    Gatoyobro     "
 },
 "1_2": {
+"dialogue": "Haz mi piel brillar! Quiero tener la piel tan suave como este abrigo que cargo puesto.",
+"offset": Vector2(740, -200),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": "Ya lo tengo! Preparate para tener piel de cachorro amigo."
+}
+},
+"size": Vector2(400, 400),
+"speaker": "    Gatoyobro     "
+},
+"1_3": {
+"dialogue": "Ese es el problema Burbujelia. 
+
+Cada vez que intento acicalarme es como lijar una gelatina quebradiza. 
+
+Ya me arden las miaujillas >.<!",
+"offset": Vector2(100, -200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_2",
+"text": "Ouch! Suena doloroso. Pobre gatito, como puedo ayudarte entonces?"
+}
+},
+"size": Vector2(400, 400),
+"speaker": "    Gatoyobro     "
+},
+"1_4": {
 "dialogue": "",
-"offset": Vector2(-340, 120),
+"offset": Vector2(-420, 320),
 "options": {
 0: {
 "condition": {},
@@ -38,8 +73,23 @@ nodes = {
 },
 "size": Vector2(300, 240),
 "speaker": ""
+},
+"3_1": {
+"link": &"1_3",
+"offset": Vector2(-120, -200),
+"signalValue": "saltico"
+},
+"3_2": {
+"link": &"1_2",
+"offset": Vector2(520, -200),
+"signalValue": "saltico"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2(60, -380),
+"signalValue": ""
 }
 }
 variables = {}
-strays = Array[String](["1_2"])
+strays = Array[String](["3_3", "0_2", "1_4"])
 characters = ""

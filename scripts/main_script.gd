@@ -13,7 +13,15 @@ func _process(delta):
 
 func _on_cauldron_mover_a_cliente():
 	transiciones.play("to_client")
+	
 
 
 func _on_client_mover_a_caldero():
 	transiciones.play("to_cauldron")
+	
+
+func _ocultar_particulas():
+	$cauldron/sprite_cauldron/particulas.hide()
+	
+func _mostrar_particulas():
+	$cauldron/sprite_cauldron/particulas.show()

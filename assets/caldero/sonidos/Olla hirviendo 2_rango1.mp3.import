@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btrjiqfdjrpf1"
+path="res://.godot/imported/Olla hirviendo 2_rango1.mp3-daa979e5796fd889f392420d9cf4f2ad.mp3str"
+
+[deps]
+
+source_file="res://assets/caldero/sonidos/Olla hirviendo 2_rango1.mp3"
+dest_files=["res://.godot/imported/Olla hirviendo 2_rango1.mp3-daa979e5796fd889f392420d9cf4f2ad.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

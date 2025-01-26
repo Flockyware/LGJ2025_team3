@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csnkcoev2qa34"
-path="res://.godot/imported/Pocion1.png-84465d8d9ebe77f195dad1b3d911c02b.ctex"
+uid="uid://c5mbbjd45ppl2"
+path="res://.godot/imported/fondo.png-f5dc3d4644c92232e416bde2dbfaf4fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pocion1.png"
-dest_files=["res://.godot/imported/Pocion1.png-84465d8d9ebe77f195dad1b3d911c02b.ctex"]
+source_file="res://assets/caldero/fondo.png"
+dest_files=["res://.godot/imported/fondo.png-f5dc3d4644c92232e416bde2dbfaf4fe.ctex"]
 
 [params]
 

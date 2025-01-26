@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qgyrdcqgc0ra"
-path="res://.godot/imported/caldero.png-795ecb7b264d6fdb726ea6112a230d5a.ctex"
+uid="uid://cqbpv6m27fqd8"
+path="res://.godot/imported/iconoChiwire.png-1b2e2dd8dfd67c6f896654b5dadb5fde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/caldero.png"
-dest_files=["res://.godot/imported/caldero.png-795ecb7b264d6fdb726ea6112a230d5a.ctex"]
+source_file="res://assets/cliente/iconoChiwire.png"
+dest_files=["res://.godot/imported/iconoChiwire.png-1b2e2dd8dfd67c6f896654b5dadb5fde.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5mbbjd45ppl2"
-path="res://.godot/imported/fondo.png-8a4c8009d63abf39c4fc9abdbea6c634.ctex"
+uid="uid://blhdm53yotwmd"
+path="res://.godot/imported/iconoFlor.png-003387d572fd4ae77a7fea8519ffe783.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fondo.png"
-dest_files=["res://.godot/imported/fondo.png-8a4c8009d63abf39c4fc9abdbea6c634.ctex"]
+source_file="res://assets/cliente/iconoFlor.png"
+dest_files=["res://.godot/imported/iconoFlor.png-003387d572fd4ae77a7fea8519ffe783.ctex"]
 
 [params]
 

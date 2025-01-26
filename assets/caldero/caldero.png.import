@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8gqu8s3igmt"
-path="res://.godot/imported/mesa.png-138505314273f1f0ea12f762b717e966.ctex"
+uid="uid://qgyrdcqgc0ra"
+path="res://.godot/imported/caldero.png-40e6fd524d4d8843632bd2dff0ce81e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mesa.png"
-dest_files=["res://.godot/imported/mesa.png-138505314273f1f0ea12f762b717e966.ctex"]
+source_file="res://assets/caldero/caldero.png"
+dest_files=["res://.godot/imported/caldero.png-40e6fd524d4d8843632bd2dff0ce81e8.ctex"]
 
 [params]
 

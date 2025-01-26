@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqwsdhtbyd5u3"
-path="res://.godot/imported/Pocion2.png-9859f47a19a3d4f64b5b7142f5c4d198.ctex"
+uid="uid://b5cjj4n7gwsq1"
+path="res://.godot/imported/P2 f.png-a0b05195001b40f4638f065b40f1390e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pocion2.png"
-dest_files=["res://.godot/imported/Pocion2.png-9859f47a19a3d4f64b5b7142f5c4d198.ctex"]
+source_file="res://assets/cliente/P2 f.png"
+dest_files=["res://.godot/imported/P2 f.png-a0b05195001b40f4638f065b40f1390e.ctex"]
 
 [params]
 

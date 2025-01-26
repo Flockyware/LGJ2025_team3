@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgkck0tg0bcec"
-path="res://.godot/imported/materialEjemplo.png-f097a733383b2c4a58f695817a5c14bc.ctex"
+uid="uid://byisqpddkdge7"
+path="res://.godot/imported/fondoNoche.webp-aecda49af294633d505873a6e4a25f8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/materialEjemplo.png"
-dest_files=["res://.godot/imported/materialEjemplo.png-f097a733383b2c4a58f695817a5c14bc.ctex"]
+source_file="res://assets/caldero/fondoNoche.webp"
+dest_files=["res://.godot/imported/fondoNoche.webp-aecda49af294633d505873a6e4a25f8a.ctex"]
 
 [params]
 

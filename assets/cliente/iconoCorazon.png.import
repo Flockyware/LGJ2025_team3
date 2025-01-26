@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6orkp11ngly3"
-path="res://.godot/imported/calderoDeprecated.png-0aa718071ecfd6314cb76484ca2d7a00.ctex"
+uid="uid://brymasc7kav8g"
+path="res://.godot/imported/iconoCorazon.png-1d5710c6468ec54899b74e732bc82ca3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/calderoDeprecated.png"
-dest_files=["res://.godot/imported/calderoDeprecated.png-0aa718071ecfd6314cb76484ca2d7a00.ctex"]
+source_file="res://assets/cliente/iconoCorazon.png"
+dest_files=["res://.godot/imported/iconoCorazon.png-1d5710c6468ec54899b74e732bc82ca3.ctex"]
 
 [params]
 

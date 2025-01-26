@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3ystqcp35tbd"
-path="res://.godot/imported/fondoBonitp.webp-c348e2455ac61ff222c39ebffc091b87.ctex"
+uid="uid://4xvf2tppjjyb"
+path="res://.godot/imported/Pocion4.png-4edfdd45490d2b795e2872e90977e90a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fondoBonitp.webp"
-dest_files=["res://.godot/imported/fondoBonitp.webp-c348e2455ac61ff222c39ebffc091b87.ctex"]
+source_file="res://assets/caldero/Pocion4.png"
+dest_files=["res://.godot/imported/Pocion4.png-4edfdd45490d2b795e2872e90977e90a.ctex"]
 
 [params]
 

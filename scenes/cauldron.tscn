@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cns602t8rqrrf"]
+[gd_scene load_steps=42 format=3 uid="uid://du61toynmu3v3"]
 
 [ext_resource type="Script" path="res://scripts/cauldron.gd" id="1_fypk7"]
 [ext_resource type="Texture2D" uid="uid://byisqpddkdge7" path="res://assets/caldero/fondoNoche.webp" id="2_28spt"]
@@ -10,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://cryyv0ex71oyt" path="res://assets/caldero/Pocion3.png" id="6_6wn1w"]
 [ext_resource type="Texture2D" uid="uid://4xvf2tppjjyb" path="res://assets/caldero/Pocion4.png" id="7_v2anf"]
 [ext_resource type="AudioStream" uid="uid://btrjiqfdjrpf1" path="res://assets/caldero/sonidos/Olla hirviendo 2_rango1.mp3" id="9_y0fvj"]
+[ext_resource type="AudioStream" uid="uid://76c3slx8yrot" path="res://assets/sfx/Reaccion de agregar ingrediente de corazon.wav" id="11_fgwrf"]
+[ext_resource type="AudioStream" uid="uid://d00564jogd5d5" path="res://assets/sfx/Reaccion de agregar ingredientes grandes.wav" id="12_txe7y"]
+[ext_resource type="AudioStream" uid="uid://csis4c8gthcfl" path="res://assets/sfx/Reaccion de agregar un ingrediente.wav" id="13_bj1cb"]
+[ext_resource type="AudioStream" uid="uid://cy6rch07lqxx3" path="res://assets/sfx/Reaccion de agregar orine de chiguire.wav" id="14_fn0rq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_flfaj"]
 animations = [{
@@ -127,6 +131,20 @@ tracks/2/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1.59349, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0.0416667, 1, 2.00833)
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../../../sfx/button_a_sfx")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s6r6e"]
 _data = {
@@ -209,6 +227,28 @@ tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -1.5516, -0.25, 0, 0.25, 0, -2.61276, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.5, 1, 2)
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AnimationPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../../../../../sfx/button_b_sfx")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t5nlc"]
@@ -293,6 +333,20 @@ tracks/2/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1.32283, -0.25, 0, 0.25, 0, 1.95826, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.733333, 1, 2)
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../../../sfx/button_c_sfx")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7m4h1"]
 _data = {
@@ -375,6 +429,20 @@ tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -2.28464, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1, 1.8)
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../../../sfx/button_d_sfx")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0om0"]
@@ -554,6 +622,21 @@ max_distance = 1700.0
 attenuation = 0.574349
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
+
+[node name="sfx" type="Node" parent="."]
+
+[node name="button_a_sfx" type="AudioStreamPlayer2D" parent="sfx"]
+stream = ExtResource("11_fgwrf")
+bus = &"SFX"
+
+[node name="button_b_sfx" type="AudioStreamPlayer2D" parent="sfx"]
+stream = ExtResource("12_txe7y")
+
+[node name="button_c_sfx" type="AudioStreamPlayer2D" parent="sfx"]
+stream = ExtResource("13_bj1cb")
+
+[node name="button_d_sfx" type="AudioStreamPlayer2D" parent="sfx"]
+stream = ExtResource("14_fn0rq")
 
 [connection signal="pressed" from="interfaz/Control/Button" to="." method="_on_button_pressed"]
 [connection signal="mouse_entered" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_mouse_entered"]

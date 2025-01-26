@@ -106,3 +106,4 @@ libraries = {
 }
 
 [connection signal="mover_a_cliente" from="cauldron" to="." method="_on_cauldron_mover_a_cliente"]
+[connection signal="mover_a_caldero" from="client" to="." method="_on_client_mover_a_caldero"]

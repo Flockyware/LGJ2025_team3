@@ -16,7 +16,7 @@ var requested_recipe:Array = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#$DialogueBubble.start("gat1")
-	$P2G/DialogueBubble.start("gat1")
+	$DialogueBox.start("gat1")
 	#var layout = Dialogic.start("res://timelines/timeline.dtl")
 	#layout.register_character(queso, $Marker2D)
 	
@@ -93,9 +93,8 @@ func _on_dialogue_bubble_dialogue_ended() -> void:
 		"d":
 			iconoReceta3.frame=3
 
-		
-	
 
 
-func _on_dialogue_bubble_dialogue_processed(speaker: Variant, dialogue: String, options: Array[String]) -> void:
-	pass # Replace with function body.
+func _on_dialogue_box_dialogue_ended():
+	$P2E/AnimationPlayer.play("moverLibreta")
+	$P2C/AnimationPlayer.play("centrarGato")

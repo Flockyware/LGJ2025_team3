@@ -1,10 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://b7hy26m6yeft1"]
+[gd_scene load_steps=30 format=3 uid="uid://b7hy26m6yeft1"]
 
 [ext_resource type="Texture2D" uid="uid://c3ystqcp35tbd" path="res://assets/cliente/fondoBonitp.webp" id="1_j3puu"]
 [ext_resource type="Script" path="res://scripts/client.gd" id="1_tvcck"]
 [ext_resource type="Texture2D" uid="uid://celwmfti0j3sk" path="res://assets/cliente/P2 c.png" id="3_ih1pk"]
 [ext_resource type="Texture2D" uid="uid://58vfq4r4xi1e" path="res://assets/cliente/P2 d.png" id="4_kr6bt"]
-[ext_resource type="Texture2D" uid="uid://c78g0db0c2wqk" path="res://assets/cliente/P2 g.png" id="5_450kt"]
 [ext_resource type="Texture2D" uid="uid://b354bitg4s87u" path="res://assets/cliente/P2 e.png" id="5_nyljq"]
 [ext_resource type="Texture2D" uid="uid://b5cjj4n7gwsq1" path="res://assets/cliente/P2 f.png" id="6_stiq5"]
 [ext_resource type="Texture2D" uid="uid://cqbpv6m27fqd8" path="res://assets/cliente/iconoChiwire.png" id="7_kouxx"]
@@ -15,8 +14,8 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="11_av554"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="12_ngksv"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="13_8einr"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBubble.gd" id="14_cw7d6"]
 [ext_resource type="Resource" uid="uid://mfdsmrxi1e2e" path="res://timelines/Arbolito.tres" id="16_3a3hd"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="17_4nvsw"]
 [ext_resource type="AudioStream" uid="uid://c5jquvfsflkdw" path="res://assets/cliente/Voz del gato.wav" id="17_5xges"]
 
 [sub_resource type="Animation" id="Animation_vpfi6"]
@@ -269,13 +268,13 @@ _data = {
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyc1b"]
 bg_color = Color(0.164706, 0.0666667, 0.54902, 1)
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_ljijj"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_vc7y8"]
 script = ExtResource("11_av554")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_giphg"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_7d2ae"]
 script = ExtResource("12_ngksv")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_qdurd"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_iij7l"]
 script = ExtResource("13_8einr")
 
 [node name="client" type="Node2D"]
@@ -349,38 +348,20 @@ text = "caldero"
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
-[node name="P2G" type="Sprite2D" parent="."]
-position = Vector2(1068, 288)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("5_450kt")
-
-[node name="DialogueBubble" type="RichTextLabel" parent="P2G"]
-clip_contents = false
-custom_minimum_size = Vector2(774.765, 441.675)
-layout_direction = 2
-offset_left = -389.0
-offset_top = -237.0
-offset_right = 385.765
-offset_bottom = 204.675
-theme = ExtResource("10_oet1j")
-bbcode_enabled = true
-text = "Sample dialogue."
-fit_content = true
-autowrap_mode = 0
-tab_size = 24
-custom_effects = [SubResource("RichTextEffect_ljijj"), SubResource("RichTextEffect_giphg"), SubResource("RichTextEffect_qdurd")]
-script = ExtResource("14_cw7d6")
-data = ExtResource("16_3a3hd")
-bubble_offset = 100
-tail_color = Color(0.133333, 0.133333, 0.133333, 0)
-dialogue_custom_effects = [SubResource("RichTextEffect_ljijj"), SubResource("RichTextEffect_giphg"), SubResource("RichTextEffect_qdurd")]
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_5xges")
 volume_db = 10.0
 max_distance = 1700.0
 
+[node name="DialogueBox" type="Panel" parent="."]
+offset_left = 694.0
+offset_top = 119.0
+offset_right = 1691.0
+offset_bottom = 535.0
+theme = ExtResource("10_oet1j")
+script = ExtResource("17_4nvsw")
+data = ExtResource("16_3a3hd")
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_vc7y8"), SubResource("RichTextEffect_7d2ae"), SubResource("RichTextEffect_iij7l")])
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="dialogue_ended" from="P2G/DialogueBubble" to="." method="_on_dialogue_bubble_dialogue_ended"]
-[connection signal="dialogue_processed" from="P2G/DialogueBubble" to="." method="_on_dialogue_bubble_dialogue_processed"]
-[connection signal="dialogue_signal" from="P2G/DialogueBubble" to="." method="_on_dialogue_bubble_dialogue_signal"]
+[connection signal="dialogue_ended" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_ended"]

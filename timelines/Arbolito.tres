@@ -9,7 +9,7 @@ starts = {
 }
 nodes = {
 "0_1": {
-"link": &"3_6",
+"link": &"1_1",
 "offset": Vector2(-1060, -200),
 "start_id": "gat1"
 },
@@ -19,16 +19,16 @@ nodes = {
 "start_id": "bruj1"
 },
 "1_1": {
-"dialogue": "   Por fin te encuentro. Tienes que ayudarmiau :(    ",
-"offset": Vector2(-700, -200),
+"dialogue": " Por fin te encuentro. Tienes que ayudarmiau :(    ",
+"offset": Vector2(-460, -200),
 "options": {
 0: {
 "condition": {},
-"link": &"3_4",
+"link": &"3_1",
 "text": "Que te ocurre Gatoyobro? La piel se te ve un tanto seca "
 }
 },
-"size": Vector2(300, 256),
+"size": Vector2(300, 240),
 "speaker": "    Gatoyobro     "
 },
 "1_2": {
@@ -54,7 +54,7 @@ Ya me arden las miaujillas >.<!",
 "options": {
 0: {
 "condition": {},
-"link": &"3_5",
+"link": &"3_2",
 "text": "Ouch! Suena doloroso. Pobre gatito, como puedo ayudarte entonces?"
 }
 },
@@ -88,21 +88,6 @@ Ya me arden las miaujillas >.<!",
 "link": "END",
 "offset": Vector2(60, -380),
 "signalValue": ""
-},
-"3_4": {
-"link": &"3_1",
-"offset": Vector2(-340, -300),
-"signalValue": "sonidito"
-},
-"3_5": {
-"link": &"3_2",
-"offset": Vector2(480, -40),
-"signalValue": "sonidito"
-},
-"3_6": {
-"link": &"1_1",
-"offset": Vector2(-806.442, -291.719),
-"signalValue": "sonidito"
 }
 }
 variables = {}

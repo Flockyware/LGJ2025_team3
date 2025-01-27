@@ -9,7 +9,7 @@ starts = {
 }
 nodes = {
 "0_1": {
-"link": &"1_1",
+"link": &"3_6",
 "offset": Vector2(-1060, -200),
 "start_id": "gat1"
 },
@@ -19,43 +19,41 @@ nodes = {
 "start_id": "bruj1"
 },
 "1_1": {
-"dialogue": " Por fin te encuentro. Tienes que ayudarmiau :(    ",
-"offset": Vector2(-460, -200),
+"dialogue": "Finally found you. You have to help meow :(",
+"offset": Vector2(-700, -200),
 "options": {
 0: {
 "condition": {},
-"link": &"3_1",
-"text": "Que te ocurre Gatoyobro? La piel se te ve un tanto seca "
+"link": &"3_4",
+"text": "What's wrong Gatoyobro? Your skin looks a tad dry."
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300, 256),
 "speaker": "    Gatoyobro     "
 },
 "1_2": {
-"dialogue": "Haz mi piel brillar! Quiero tener la piel tan suave como este abrigo que cargo puesto.",
+"dialogue": "Make my skin shine! I want my skin to be softer than a cub's toe beans.",
 "offset": Vector2(740, -200),
 "options": {
 0: {
 "condition": {},
 "link": "END",
-"text": "Ya lo tengo! Preparate para tener piel de cachorro amigo."
+"text": "I've got it! Get ready to have kitten skin."
 }
 },
 "size": Vector2(400, 400),
 "speaker": "    Gatoyobro     "
 },
 "1_3": {
-"dialogue": "Ese es el problema Burbujelia. 
-
-Cada vez que intento acicalarme es como lijar una gelatina quebradiza. 
-
-Ya me arden las miaujillas >.<!",
+"dialogue": "That's the problem Burbujelia. 
+Every time I try to clean myself is like sand paper over a crackled gelatin. 
+Meow cheeks are burning already >.<!",
 "offset": Vector2(100, -200),
 "options": {
 0: {
 "condition": {},
-"link": &"3_2",
-"text": "Ouch! Suena doloroso. Pobre gatito, como puedo ayudarte entonces?"
+"link": &"3_5",
+"text": "Ouch! Sounds painful. Poor kitty, how can I help you then?"
 }
 },
 "size": Vector2(400, 400),
@@ -88,6 +86,21 @@ Ya me arden las miaujillas >.<!",
 "link": "END",
 "offset": Vector2(60, -380),
 "signalValue": ""
+},
+"3_4": {
+"link": &"3_1",
+"offset": Vector2(-340, -300),
+"signalValue": "sonidito"
+},
+"3_5": {
+"link": &"3_2",
+"offset": Vector2(480, -40),
+"signalValue": "sonidito"
+},
+"3_6": {
+"link": &"1_1",
+"offset": Vector2(-806.442, -291.719),
+"signalValue": "sonidito"
 }
 }
 variables = {}

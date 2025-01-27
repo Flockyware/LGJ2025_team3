@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://cns602t8rqrrf"]
+[gd_scene load_steps=76 format=3 uid="uid://cns602t8rqrrf"]
 
 [ext_resource type="Script" path="res://scripts/cauldron.gd" id="1_fypk7"]
 [ext_resource type="Texture2D" uid="uid://byisqpddkdge7" path="res://assets/caldero/fondoNoche.webp" id="2_28spt"]
@@ -38,8 +38,14 @@
 [ext_resource type="Texture2D" uid="uid://b73otwjwdb31d" path="res://assets/caldero/spriteCaldero/l110021.png" id="26_e0wyd"]
 [ext_resource type="Texture2D" uid="uid://ch1csntxk124" path="res://assets/caldero/spriteCaldero/l110022.png" id="27_cxfqd"]
 [ext_resource type="Texture2D" uid="uid://scpngfjhv203" path="res://assets/caldero/spriteCaldero/l110023.png" id="28_pgr7t"]
-[ext_resource type="Texture2D" uid="uid://c3ystqcp35tbd" path="res://assets/cliente/fondoBonitp.webp" id="39_mdln6"]
-[ext_resource type="Texture2D" uid="uid://celwmfti0j3sk" path="res://assets/cliente/P2 c.png" id="40_ebaq6"]
+[ext_resource type="Texture2D" uid="uid://cq37oquh4tt6t" path="res://assets/caldero/clienteIcono.png" id="30_xd6d0"]
+[ext_resource type="Texture2D" uid="uid://ceh33sx57ni2n" path="res://assets/cliente/fondoVaca.png" id="39_2ilwo"]
+[ext_resource type="Texture2D" uid="uid://cv7vnh5p361tj" path="res://assets/victoria/burbujaFinal.png" id="40_q16cf"]
+[ext_resource type="Texture2D" uid="uid://rlnkhigwq8ys" path="res://assets/victoria/gatoyobroVictoria.png" id="41_cbd0u"]
+[ext_resource type="Texture2D" uid="uid://c2jhq12vwk88w" path="res://assets/victoria/Burbujelia.png" id="42_e5jmx"]
+[ext_resource type="Texture2D" uid="uid://bx5tg1ok0bcu4" path="res://assets/victoria/BurbujeliaSoplando.png" id="43_lgaqi"]
+[ext_resource type="Texture2D" uid="uid://dbj72m7181yhx" path="res://assets/derrota/explosion PNG.png" id="44_05kvq"]
+[ext_resource type="Texture2D" uid="uid://bu7hkim7n6khu" path="res://assets/derrota/gatoyobroEnojao.webp" id="45_x3mmx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_flfaj"]
 animations = [{
@@ -541,6 +547,34 @@ _data = {
 "verterPocima4": SubResource("Animation_ikwyp")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_co6y2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_q16cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8plih")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1otag"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_e5jmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_lgaqi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="cauldron" type="Node2D"]
 script = ExtResource("1_fypk7")
 
@@ -592,15 +626,20 @@ grow_vertical = 2
 
 [node name="Button" type="Button" parent="interfaz/Control"]
 layout_mode = 0
-offset_left = 1634.0
+offset_left = 1505.69
 offset_top = 109.0
-offset_right = 1912.0
+offset_right = 1783.69
 offset_bottom = 231.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 51
 theme_override_styles/normal = SubResource("StyleBoxFlat_cjr05")
 button_mask = 3
-text = "cliente"
+text = "Client"
+
+[node name="ClienteIcono" type="Sprite2D" parent="interfaz/Control/Button"]
+position = Vector2(306.785, 64.115)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("30_xd6d0")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interfaz/Control"]
 layout_mode = 1
@@ -735,28 +774,64 @@ volume_db = 10.0
 
 [node name="menuVictoria" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(971.173, 542.75)
-scale = Vector2(1.85343, 1.85343)
-texture = ExtResource("39_mdln6")
+position = Vector2(1024.54, 572.751)
+scale = Vector2(0.864, 0.864)
+texture = ExtResource("39_2ilwo")
 
-[node name="Sprite2D" type="Sprite2D" parent="menuVictoria"]
-scale = Vector2(1.30928, 1.30928)
-texture = ExtResource("5_8plih")
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="menuVictoria"]
+position = Vector2(49.1425, -216.147)
+sprite_frames = SubResource("SpriteFrames_co6y2")
 
-[node name="Label" type="Label" parent="menuVictoria/Sprite2D"]
-offset_left = -111.0
-offset_top = -67.0
-offset_right = 105.0
-offset_bottom = 57.0
-theme_override_font_sizes/font_size = 101
+[node name="Label" type="Label" parent="menuVictoria/AnimatedSprite2D2"]
+offset_left = -222.222
+offset_top = -144.676
+offset_right = 206.778
+offset_bottom = 143.324
+theme_override_font_sizes/font_size = 211
 text = "WIN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="P2C" type="Sprite2D" parent="menuVictoria"]
-position = Vector2(340.356, 69.7354)
-scale = Vector2(0.369, 0.369)
-texture = ExtResource("40_ebaq6")
+position = Vector2(762.105, 98.6682)
+scale = Vector2(0.694, 0.694)
+texture = ExtResource("41_cbd0u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="menuVictoria"]
+position = Vector2(-703.172, 131.076)
+scale = Vector2(0.73, 0.73)
+sprite_frames = SubResource("SpriteFrames_1otag")
+frame = 1
+
+[node name="menuPerdida" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1024.54, 572.751)
+scale = Vector2(0.834, 0.834)
+texture = ExtResource("39_2ilwo")
+
+[node name="ExplosionPng" type="Sprite2D" parent="menuPerdida"]
+position = Vector2(-354.366, 23.0808)
+scale = Vector2(0.610072, 0.610072)
+texture = ExtResource("44_05kvq")
+
+[node name="P2C" type="Sprite2D" parent="menuPerdida"]
+position = Vector2(722.373, 169.364)
+scale = Vector2(1.954, 1.954)
+texture = ExtResource("45_x3mmx")
+
+[node name="Sprite2D" type="Sprite2D" parent="menuPerdida"]
+scale = Vector2(2.954, 2.954)
+texture = ExtResource("5_8plih")
+
+[node name="Label" type="Label" parent="menuPerdida/Sprite2D"]
+offset_left = -111.0
+offset_top = -67.0
+offset_right = 105.0
+offset_bottom = 57.0
+theme_override_font_sizes/font_size = 81
+text = "LOSE"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0

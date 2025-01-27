@@ -13,6 +13,7 @@ var ingridients = {
 # pocimas
 var pocimaDePielSuave:Array=["b","d","a"]
 var pocima2:Array=["b","c","a","c"]
+var estadoJuego="o"
 
 #pocima actual
 var recipe:Array = []
@@ -36,13 +37,17 @@ signal mover_a_cliente
 func recipe_print():
 	print(recipe)
 	if recipe.size() > client.requested_recipe.size():
-		print("ooops error!")
+		estadoJuego="perdi"
+		timerVariable.start()
+
 	elif recipe.size() == client.requested_recipe.size():
 		if recipe == client.requested_recipe:
+			estadoJuego="gane"
 			timerVariable.start()
 			
 		else:
-			print("ooops error!")
+			estadoJuego="perdi"
+			timerVariable.start()
 
 
 
@@ -84,4 +89,7 @@ func _on_button_pressed() -> void:
 
 
 func _on_timer_timeout() -> void:
-	$menuVictoria.visible=true
+	if estadoJuego=="gane":
+		$menuVictoria.visible=true
+	elif estadoJuego=="perdi":
+		$menuPerdida.visible=true

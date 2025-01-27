@@ -51,18 +51,18 @@ func set_random_ingridient():
 	
 
 
-func _on_dialogue_bubble_dialogue_signal(value: String) -> void:
+func _on_dialogue_box_dialogue_signal(value: String) -> void:
 		if value == "saltico":
 			$P2C/AnimationPlayer.play("saltico2.0")
 		elif value == "sonidito":
 			$AudioStreamPlayer2D.play()
+	
 
 
-func _on_dialogue_bubble_dialogue_ended() -> void:
+func _on_dialogue_box_dialogue_ended():
 	$AudioStreamPlayer2D.stop()
 	$P2E/AnimationPlayer.play("moverLibreta")
 	$P2C/AnimationPlayer.play("centrarGato")
-	$P2G.visible=false
 	match requested_recipe[0]:
 		"a":
 			iconoReceta1.frame=0
@@ -92,9 +92,3 @@ func _on_dialogue_bubble_dialogue_ended() -> void:
 			iconoReceta3.frame=2
 		"d":
 			iconoReceta3.frame=3
-
-
-
-func _on_dialogue_box_dialogue_ended():
-	$P2E/AnimationPlayer.play("moverLibreta")
-	$P2C/AnimationPlayer.play("centrarGato")

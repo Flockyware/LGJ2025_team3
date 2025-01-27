@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c02nv2fukc6vr"
-path="res://.godot/imported/gatoyobro.png-f6199b4e99f453463bb9e2e309f6a2c3.ctex"
+path="res://.godot/imported/gatoyobro.png-8c5a7bf82a8b056bedf894ddbb1a7251.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gatoyobro.png"
-dest_files=["res://.godot/imported/gatoyobro.png-f6199b4e99f453463bb9e2e309f6a2c3.ctex"]
+source_file="res://assets/cliente/gatoyobro.png"
+dest_files=["res://.godot/imported/gatoyobro.png-8c5a7bf82a8b056bedf894ddbb1a7251.ctex"]
 
 [params]
 

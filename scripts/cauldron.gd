@@ -9,7 +9,7 @@ var ingridients = {
 	"d":"d",
 }
 @onready var client: Node2D = $"../client"
-
+@onready var timerVariable=$Timer
 # pocimas
 var pocimaDePielSuave:Array=["b","d","a"]
 var pocima2:Array=["b","c","a","c"]
@@ -39,7 +39,8 @@ func recipe_print():
 		print("ooops error!")
 	elif recipe.size() == client.requested_recipe.size():
 		if recipe == client.requested_recipe:
-			print("lograste!")
+			timerVariable.start()
+			
 		else:
 			print("ooops error!")
 
@@ -81,4 +82,6 @@ func _on_button_pressed() -> void:
 	pass
 
 
-	
+
+func _on_timer_timeout() -> void:
+	$menuVictoria.visible=true

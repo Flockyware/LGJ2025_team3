@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cns602t8rqrrf"]
+[gd_scene load_steps=68 format=3 uid="uid://cns602t8rqrrf"]
 
 [ext_resource type="Script" path="res://scripts/cauldron.gd" id="1_fypk7"]
 [ext_resource type="Texture2D" uid="uid://byisqpddkdge7" path="res://assets/caldero/fondoNoche.webp" id="2_28spt"]
@@ -7,23 +7,121 @@
 [ext_resource type="Texture2D" uid="uid://csnkcoev2qa34" path="res://assets/caldero/Pocion1.png" id="4_mstxl"]
 [ext_resource type="Texture2D" uid="uid://dexdo01sulcnd" path="res://assets/caldero/burbuja.png" id="5_8plih"]
 [ext_resource type="Texture2D" uid="uid://dqwsdhtbyd5u3" path="res://assets/caldero/Pocion2.png" id="5_o0lnv"]
+[ext_resource type="Texture2D" uid="uid://bxwve0nqytn1k" path="res://assets/caldero/spriteCaldero/l110000.png" id="5_unvy8"]
 [ext_resource type="Texture2D" uid="uid://cryyv0ex71oyt" path="res://assets/caldero/Pocion3.png" id="6_6wn1w"]
+[ext_resource type="Texture2D" uid="uid://c4yd5bgyybkyo" path="res://assets/caldero/spriteCaldero/l110001.png" id="6_ibkmj"]
+[ext_resource type="Texture2D" uid="uid://dwvdggfca2n3i" path="res://assets/caldero/spriteCaldero/l110002.png" id="7_a1vj0"]
 [ext_resource type="Texture2D" uid="uid://4xvf2tppjjyb" path="res://assets/caldero/Pocion4.png" id="7_v2anf"]
+[ext_resource type="Texture2D" uid="uid://bb7pb4grr0rp1" path="res://assets/caldero/spriteCaldero/l110003.png" id="8_ythsu"]
+[ext_resource type="Texture2D" uid="uid://chi77h0hyc11k" path="res://assets/caldero/spriteCaldero/l110004.png" id="9_84cdo"]
 [ext_resource type="AudioStream" uid="uid://btrjiqfdjrpf1" path="res://assets/caldero/sonidos/Olla hirviendo 2_rango1.mp3" id="9_y0fvj"]
+[ext_resource type="Texture2D" uid="uid://dj7texixuc57w" path="res://assets/caldero/spriteCaldero/l110005.png" id="10_foiro"]
 [ext_resource type="AudioStream" uid="uid://76c3slx8yrot" path="res://assets/sfx/Reaccion de agregar ingrediente de corazon.wav" id="11_fgwrf"]
+[ext_resource type="Texture2D" uid="uid://b3mho7dxqtxhh" path="res://assets/caldero/spriteCaldero/l110006.png" id="11_t1s0l"]
+[ext_resource type="Texture2D" uid="uid://dhqs3xy8qbuo3" path="res://assets/caldero/spriteCaldero/l110007.png" id="12_jpo5g"]
 [ext_resource type="AudioStream" uid="uid://d00564jogd5d5" path="res://assets/sfx/Reaccion de agregar ingredientes grandes.wav" id="12_txe7y"]
 [ext_resource type="AudioStream" uid="uid://csis4c8gthcfl" path="res://assets/sfx/Reaccion de agregar un ingrediente.wav" id="13_bj1cb"]
+[ext_resource type="Texture2D" uid="uid://0bthfgdvwrnq" path="res://assets/caldero/spriteCaldero/l110008.png" id="13_kirvl"]
+[ext_resource type="Texture2D" uid="uid://doaakg57rw277" path="res://assets/caldero/spriteCaldero/l110009.png" id="14_65j36"]
 [ext_resource type="AudioStream" uid="uid://cy6rch07lqxx3" path="res://assets/sfx/Reaccion de agregar orine de chiguire.wav" id="14_fn0rq"]
+[ext_resource type="Texture2D" uid="uid://gsysevwa5gng" path="res://assets/caldero/spriteCaldero/l110010.png" id="15_vngcn"]
+[ext_resource type="Texture2D" uid="uid://4uxlhbls6k5j" path="res://assets/caldero/spriteCaldero/l110011.png" id="16_vsdwl"]
+[ext_resource type="Texture2D" uid="uid://cb7ora85mrqu6" path="res://assets/caldero/spriteCaldero/l110012.png" id="17_mpg1s"]
+[ext_resource type="Texture2D" uid="uid://cfh6bm5kvnmgm" path="res://assets/caldero/spriteCaldero/l110013.png" id="18_lckx7"]
+[ext_resource type="Texture2D" uid="uid://br2uc3lfs4n78" path="res://assets/caldero/spriteCaldero/l110014.png" id="19_wximo"]
+[ext_resource type="Texture2D" uid="uid://cvq3acpfqm6mo" path="res://assets/caldero/spriteCaldero/l110015.png" id="20_743we"]
+[ext_resource type="Texture2D" uid="uid://bau1e81dkfmgu" path="res://assets/caldero/spriteCaldero/l110016.png" id="21_lqa8e"]
+[ext_resource type="Texture2D" uid="uid://bvn7wmbn6vs43" path="res://assets/caldero/spriteCaldero/l110017.png" id="22_dumd4"]
+[ext_resource type="Texture2D" uid="uid://dliw56o3axjrt" path="res://assets/caldero/spriteCaldero/l110018.png" id="23_0db6v"]
+[ext_resource type="Texture2D" uid="uid://3veyvt57wpyj" path="res://assets/caldero/spriteCaldero/l110019.png" id="24_7038y"]
+[ext_resource type="Texture2D" uid="uid://cqb5lnqs4alag" path="res://assets/caldero/spriteCaldero/l110020.png" id="25_60r60"]
+[ext_resource type="Texture2D" uid="uid://b73otwjwdb31d" path="res://assets/caldero/spriteCaldero/l110021.png" id="26_e0wyd"]
+[ext_resource type="Texture2D" uid="uid://ch1csntxk124" path="res://assets/caldero/spriteCaldero/l110022.png" id="27_cxfqd"]
+[ext_resource type="Texture2D" uid="uid://scpngfjhv203" path="res://assets/caldero/spriteCaldero/l110023.png" id="28_pgr7t"]
+[ext_resource type="Texture2D" uid="uid://c3ystqcp35tbd" path="res://assets/cliente/fondoBonitp.webp" id="39_mdln6"]
+[ext_resource type="Texture2D" uid="uid://celwmfti0j3sk" path="res://assets/cliente/P2 c.png" id="40_ebaq6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_flfaj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_chyaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_unvy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ibkmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a1vj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ythsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_84cdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_foiro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_t1s0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jpo5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kirvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_65j36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vngcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vsdwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mpg1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_lckx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wximo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_743we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_lqa8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_dumd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_0db6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_7038y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_60r60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_e0wyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_cxfqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pgr7t")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 24.0
 }]
 
 [sub_resource type="Curve" id="Curve_nwjsb"]
@@ -471,6 +569,8 @@ position = Vector2(966, 521)
 rotation = -0.0174533
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_flfaj")
+autoplay = "default"
+frame_progress = 0.76262
 
 [node name="particulas" type="GPUParticles2D" parent="sprite_cauldron"]
 modulate = Color(1, 1, 1, 0.784314)
@@ -641,9 +741,38 @@ volume_db = 10.0
 stream = ExtResource("14_fn0rq")
 volume_db = 10.0
 
+[node name="menuVictoria" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(971.173, 542.75)
+scale = Vector2(1.85343, 1.85343)
+texture = ExtResource("39_mdln6")
+
+[node name="Sprite2D" type="Sprite2D" parent="menuVictoria"]
+scale = Vector2(1.30928, 1.30928)
+texture = ExtResource("5_8plih")
+
+[node name="Label" type="Label" parent="menuVictoria/Sprite2D"]
+offset_left = -111.0
+offset_top = -67.0
+offset_right = 105.0
+offset_bottom = 57.0
+theme_override_font_sizes/font_size = 101
+text = "WIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P2C" type="Sprite2D" parent="menuVictoria"]
+position = Vector2(340.356, 69.7354)
+scale = Vector2(0.369, 0.369)
+texture = ExtResource("40_ebaq6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
 [connection signal="pressed" from="interfaz/Control/Button" to="." method="_on_button_pressed"]
 [connection signal="mouse_entered" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_mouse_entered"]
 [connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_pressed"]
 [connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_B" to="." method="_on_button_b_pressed"]
 [connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_down/Button_C" to="." method="_on_button_c_pressed"]
 [connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_down/Button_D" to="." method="_on_button_d_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

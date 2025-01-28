@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqmyet1uofx8y"]
+[gd_scene load_steps=9 format=3 uid="uid://dqmyet1uofx8y"]
 
 [ext_resource type="PackedScene" uid="uid://cns602t8rqrrf" path="res://scenes/cauldron.tscn" id="1_5vqgu"]
 [ext_resource type="Script" path="res://scripts/main_script.gd" id="1_psx8q"]
 [ext_resource type="PackedScene" uid="uid://b7hy26m6yeft1" path="res://scenes/client.tscn" id="2_l3w83"]
+[ext_resource type="AudioStream" uid="uid://r1oabffrf34b" path="res://assets/burbumusica.mp3" id="4_ces6v"]
 
 [sub_resource type="Animation" id="Animation_n6aaa"]
 length = 0.001
@@ -106,6 +107,10 @@ libraries = {
 }
 
 [node name="ending" type="Node2D" parent="."]
+
+[node name="musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ces6v")
+autoplay = true
 
 [connection signal="mover_a_cliente" from="cauldron" to="." method="_on_cauldron_mover_a_cliente"]
 [connection signal="mover_a_caldero" from="client" to="." method="_on_client_mover_a_caldero"]

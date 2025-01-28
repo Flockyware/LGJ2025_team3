@@ -92,6 +92,7 @@ func _on_timer_timeout() -> void:
 		$menuVictoria.visible=true
 	elif estadoJuego=="perdi":
 		$menuPerdida.visible=true
+		
 
 
 func _on_button_b_mouse_entered() -> void:
@@ -104,3 +105,7 @@ func _on_button_c_mouse_entered() -> void:
 
 func _on_button_d_mouse_entered() -> void:
 	$interfaz/Control/VBoxContainer/buttons_container_down/Button_D/AnimationPlayer.play("meneo4")
+
+
+func _on_reset_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/start_menu.tscn")

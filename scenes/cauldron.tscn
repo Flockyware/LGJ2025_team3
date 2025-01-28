@@ -199,6 +199,20 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0)
 }
 
+[sub_resource type="Animation" id="Animation_k5oyq"]
+resource_name = "menearse1"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.23911, -0.25, 0, 0.25, 0, 0.150098, -0.25, 0, 0.25, 0, -0.15708, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.233333, 0.533333, 0.766667, 1)
+}
+
 [sub_resource type="Animation" id="Animation_e50d3"]
 resource_name = "verter pocima"
 length = 2.0
@@ -250,20 +264,6 @@ tracks/3/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_k5oyq"]
-resource_name = "menearse1"
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.23911, -0.25, 0, 0.25, 0, 0.150098, -0.25, 0, 0.25, 0, -0.15708, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.233333, 0.533333, 0.766667, 1)
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s6r6e"]
 _data = {
 "RESET": SubResource("Animation_xum38"),
@@ -309,6 +309,20 @@ tracks/2/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_n47et"]
+resource_name = "meneo2"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.0436332, -0.25, 0, 0.25, 0, 0.0890118, -0.25, 0, 0.25, 0, -0.0767945, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.466667, 0.733333, 1)
 }
 
 [sub_resource type="Animation" id="Animation_bt3v7"]
@@ -362,20 +376,6 @@ tracks/3/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_n47et"]
-resource_name = "meneo2"
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.0436332, -0.25, 0, 0.25, 0, 0.0890118, -0.25, 0, 0.25, 0, -0.0767945, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2, 0.466667, 0.733333, 1)
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t5nlc"]
 _data = {
 "RESET": SubResource("Animation_2vuuc"),
@@ -421,6 +421,20 @@ tracks/2/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_inql0"]
+resource_name = "meneo3"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.120428, -0.25, 0, 0.25, 0, 0.0523599, -0.25, 0, 0.25, 0, -0.0349066, -0.25, 0, 0.25, 0, -0.0222081, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.633333, 0.8, 1)
 }
 
 [sub_resource type="Animation" id="Animation_syp3r"]
@@ -474,20 +488,6 @@ tracks/3/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_inql0"]
-resource_name = "meneo3"
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.120428, -0.25, 0, 0.25, 0, 0.0523599, -0.25, 0, 0.25, 0, -0.0349066, -0.25, 0, 0.25, 0, -0.0222081, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.633333, 0.8, 1)
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7m4h1"]
 _data = {
 "RESET": SubResource("Animation_d3dj7"),
@@ -533,6 +533,20 @@ tracks/2/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_nyxe4"]
+resource_name = "meneo4"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.120428, -0.25, 0, 0.25, 0, 0.0523599, -0.25, 0, 0.25, 0, -0.0349066, -0.25, 0, 0.25, 0, 0.0349066, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.233333, 0.433333, 0.633333, 0.833333, 1)
 }
 
 [sub_resource type="Animation" id="Animation_ikwyp"]
@@ -584,20 +598,6 @@ tracks/3/keys = {
 "args": [0.0],
 "method": &"play"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_nyxe4"]
-resource_name = "meneo4"
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.120428, -0.25, 0, 0.25, 0, 0.0523599, -0.25, 0, 0.25, 0, -0.0349066, -0.25, 0, 0.25, 0, 0.0349066, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.233333, 0.433333, 0.633333, 0.833333, 1)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0om0"]
@@ -864,7 +864,6 @@ sprite_frames = SubResource("SpriteFrames_1otag")
 frame = 1
 
 [node name="menuPerdida" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1024.54, 572.751)
 scale = Vector2(0.834, 0.834)
 texture = ExtResource("39_2ilwo")
@@ -893,6 +892,20 @@ text = "LOSE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="reset" type="Button" parent="menuPerdida/Sprite2D"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -181.0
+offset_top = -171.5
+offset_right = -76.0
+offset_bottom = -128.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "RESET"
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 
@@ -905,4 +918,5 @@ wait_time = 2.0
 [connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_down/Button_C" to="." method="_on_button_c_pressed"]
 [connection signal="mouse_entered" from="interfaz/Control/VBoxContainer/buttons_container_down/Button_D" to="." method="_on_button_d_mouse_entered"]
 [connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_down/Button_D" to="." method="_on_button_d_pressed"]
+[connection signal="pressed" from="menuPerdida/Sprite2D/reset" to="." method="_on_reset_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

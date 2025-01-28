@@ -53,7 +53,7 @@ func set_random_ingridient():
 
 func _on_dialogue_box_dialogue_signal(value: String) -> void:
 		if value == "saltico":
-			$AnimatedSprite2D/AnimationPlayer.play("saltico2.0")
+			$Node2D/animacionPersonaje.play("saltico2.0")
 		elif value == "sonidito":
 			$AudioStreamPlayer2D.play()
 	
@@ -62,7 +62,7 @@ func _on_dialogue_box_dialogue_signal(value: String) -> void:
 func _on_dialogue_box_dialogue_ended():
 	$AudioStreamPlayer2D.stop()
 	$P2E/AnimationPlayer.play("moverLibreta")
-	$AnimatedSprite2D/AnimationPlayer.play("centrarGato")
+	$Node2D/animacionPersonaje.play("centrarGato")
 	match requested_recipe[0]:
 		"a":
 			iconoReceta1.frame=0
@@ -95,7 +95,7 @@ func _on_dialogue_box_dialogue_ended():
 
 
 func _on_timer_timeout() -> void:
-	$AnimatedSprite2D.play()
+	$Node2D/gatoyobro.play()
 	$Timer.start()
 	
 	

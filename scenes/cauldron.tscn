@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://cns602t8rqrrf"]
+[gd_scene load_steps=80 format=3 uid="uid://cns602t8rqrrf"]
 
 [ext_resource type="Script" path="res://scripts/cauldron.gd" id="1_fypk7"]
 [ext_resource type="Texture2D" uid="uid://byisqpddkdge7" path="res://assets/caldero/fondoNoche.webp" id="2_28spt"]
@@ -250,9 +250,24 @@ tracks/3/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_k5oyq"]
+resource_name = "menearse1"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.23911, -0.25, 0, 0.25, 0, 0.150098, -0.25, 0, 0.25, 0, -0.15708, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.233333, 0.533333, 0.766667, 1)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s6r6e"]
 _data = {
 "RESET": SubResource("Animation_xum38"),
+"menearse1": SubResource("Animation_k5oyq"),
 "verter pocima": SubResource("Animation_e50d3")
 }
 
@@ -347,9 +362,24 @@ tracks/3/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_n47et"]
+resource_name = "meneo2"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.0436332, -0.25, 0, 0.25, 0, 0.0890118, -0.25, 0, 0.25, 0, -0.0767945, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.466667, 0.733333, 1)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t5nlc"]
 _data = {
 "RESET": SubResource("Animation_2vuuc"),
+"meneo2": SubResource("Animation_n47et"),
 "verterPocima2": SubResource("Animation_bt3v7")
 }
 
@@ -444,9 +474,24 @@ tracks/3/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_inql0"]
+resource_name = "meneo3"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.120428, -0.25, 0, 0.25, 0, 0.0523599, -0.25, 0, 0.25, 0, -0.0349066, -0.25, 0, 0.25, 0, -0.0222081, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.633333, 0.8, 1)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7m4h1"]
 _data = {
 "RESET": SubResource("Animation_d3dj7"),
+"meneo3": SubResource("Animation_inql0"),
 "verterPocima3": SubResource("Animation_syp3r")
 }
 
@@ -541,9 +586,24 @@ tracks/3/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_nyxe4"]
+resource_name = "meneo4"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.120428, -0.25, 0, 0.25, 0, 0.0523599, -0.25, 0, 0.25, 0, -0.0349066, -0.25, 0, 0.25, 0, 0.0349066, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.233333, 0.433333, 0.633333, 0.833333, 1)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0om0"]
 _data = {
 "RESET": SubResource("Animation_2d25m"),
+"meneo4": SubResource("Animation_nyxe4"),
 "verterPocima4": SubResource("Animation_ikwyp")
 }
 
@@ -839,7 +899,10 @@ wait_time = 2.0
 [connection signal="pressed" from="interfaz/Control/Button" to="." method="_on_button_pressed"]
 [connection signal="mouse_entered" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_mouse_entered"]
 [connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_A" to="." method="_on_button_a_pressed"]
+[connection signal="mouse_entered" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_B" to="." method="_on_button_b_mouse_entered"]
 [connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_up/Button_B" to="." method="_on_button_b_pressed"]
+[connection signal="mouse_entered" from="interfaz/Control/VBoxContainer/buttons_container_down/Button_C" to="." method="_on_button_c_mouse_entered"]
 [connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_down/Button_C" to="." method="_on_button_c_pressed"]
+[connection signal="mouse_entered" from="interfaz/Control/VBoxContainer/buttons_container_down/Button_D" to="." method="_on_button_d_mouse_entered"]
 [connection signal="pressed" from="interfaz/Control/VBoxContainer/buttons_container_down/Button_D" to="." method="_on_button_d_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

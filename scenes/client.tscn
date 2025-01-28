@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b7hy26m6yeft1"]
+[gd_scene load_steps=38 format=3 uid="uid://b7hy26m6yeft1"]
 
 [ext_resource type="Script" path="res://scripts/client.gd" id="1_tvcck"]
 [ext_resource type="Texture2D" uid="uid://ceh33sx57ni2n" path="res://assets/cliente/fondoVaca.png" id="2_xpvff"]
@@ -22,6 +22,177 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="17_4nvsw"]
 [ext_resource type="AudioStream" uid="uid://c5jquvfsflkdw" path="res://assets/cliente/Voz del gato.wav" id="17_5xges"]
 
+[sub_resource type="Animation" id="Animation_vpfi6"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimatedSprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AnimatedSprite2D:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AnimatedSprite2D:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Node2D:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(525, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Node2D:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(670, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_y56jf"]
+resource_name = "centrarGato"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(525, -0.25, 0, 0.25, 0, 832, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimatedSprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(670, -0.25, 0, 0.25, 0, 662, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Node2D:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(642.955, -0.25, 0, 0.25, 0, 777.19, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Node2D:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(629.905, -0.25, 0, 0.25, 0, 629.905, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_5uace"]
+resource_name = "saltico2.0"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0, 411, -0.25, 0, 0.25, 0, 411, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.266667, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimatedSprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0, 610.68, -0.25, 0, 0.25, 0, 652, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.266667, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AnimatedSprite2D:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.674, -0.25, 0, 0.25, 0, 0.674, -0.25, 0, 0.25, 0, 0.674, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.266667, 0.5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AnimatedSprite2D:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.674, -0.25, 0, 0.25, 0, 0.749, -0.25, 0, 0.25, 0, 0.674, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.266667, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ey6ud"]
+_data = {
+"RESET": SubResource("Animation_vpfi6"),
+"centrarGato": SubResource("Animation_y56jf"),
+"saltico2.0": SubResource("Animation_5uace")
+}
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_4qq2r"]
 animations = [{
 "frames": [{
@@ -44,243 +215,6 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
-
-[sub_resource type="Animation" id="Animation_vpfi6"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:scale:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/4/type = "bezier"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../AnimatedSprite2D:position:x")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/5/type = "bezier"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../AnimatedSprite2D:position:y")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/6/type = "bezier"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../AnimatedSprite2D:scale:x")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/7/type = "bezier"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../AnimatedSprite2D:scale:y")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
-[sub_resource type="Animation" id="Animation_y56jf"]
-resource_name = "centrarGato"
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0, 599.615, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0, 619.12, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../AnimatedSprite2D:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0, 619.12, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../AnimatedSprite2D:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0, 619.12, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-
-[sub_resource type="Animation" id="Animation_5uace"]
-resource_name = "saltico2.0"
-length = 0.5
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0, 0.674, -0.25, 0, 0.25, 0, 0.673516, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.233333, 0.5)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:scale:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0, 0.799, -0.25, 0, 0.25, 0, 0.673516, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.233333, 0.5)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0, 411, -0.25, 0, 0.25, 0, 411, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.233333, 0.5)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0, 608.5, -0.25, 0, 0.25, 0, 652, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.233333, 0.5)
-}
-tracks/4/type = "bezier"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../AnimatedSprite2D:position:x")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0, 411, -0.25, 0, 0.25, 0, 411, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.266667, 0.5)
-}
-tracks/5/type = "bezier"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../AnimatedSprite2D:position:y")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0, 610.68, -0.25, 0, 0.25, 0, 652, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.266667, 0.5)
-}
-tracks/6/type = "bezier"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../AnimatedSprite2D:scale:x")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.674, -0.25, 0, 0.25, 0, 0.674, -0.25, 0, 0.25, 0, 0.674, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.266667, 0.5)
-}
-tracks/7/type = "bezier"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../AnimatedSprite2D:scale:y")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.674, -0.25, 0, 0.25, 0, 0.749, -0.25, 0, 0.25, 0, 0.674, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.266667, 0.5)
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ey6ud"]
-_data = {
-"RESET": SubResource("Animation_vpfi6"),
-"centrarGato": SubResource("Animation_y56jf"),
-"saltico2.0": SubResource("Animation_5uace")
-}
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hj3kr"]
 animations = [{
@@ -402,6 +336,42 @@ _data = {
 "moverLibreta": SubResource("Animation_ur4k0")
 }
 
+[sub_resource type="Animation" id="Animation_71ghd"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_8rw6r"]
+resource_name = "rotarEsfera"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 6.28319, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 9.93333)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xa7sn"]
+_data = {
+"RESET": SubResource("Animation_71ghd"),
+"rotarEsfera": SubResource("Animation_8rw6r")
+}
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyc1b"]
 bg_color = Color(0.164706, 0.0666667, 0.54902, 1)
 
@@ -422,19 +392,20 @@ position = Vector2(1510.07, 487)
 scale = Vector2(1.208, 0.706)
 texture = ExtResource("2_xpvff")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(411, 652)
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(693.78, 629.905)
 scale = Vector2(0.674, 0.674)
-sprite_frames = SubResource("SpriteFrames_4qq2r")
-frame = 4
-frame_progress = 1.0
-speed_scale = 2.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+[node name="animacionPersonaje" type="AnimationPlayer" parent="Node2D"]
 root_node = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_ey6ud")
 }
+
+[node name="gatoyobro" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(-380.979, -7.27749)
+sprite_frames = SubResource("SpriteFrames_4qq2r")
+speed_scale = 2.0
 
 [node name="P2D" type="Sprite2D" parent="."]
 position = Vector2(962.444, 907)
@@ -481,6 +452,12 @@ texture = ExtResource("6_stiq5")
 position = Vector2(180, 833)
 texture = ExtResource("13_d7pyf")
 
+[node name="animacionEsfera" type="AnimationPlayer" parent="Burbuja"]
+libraries = {
+"": SubResource("AnimationLibrary_xa7sn")
+}
+autoplay = "rotarEsfera"
+
 [node name="Button" type="Button" parent="."]
 offset_left = 117.0
 offset_top = 97.0
@@ -493,7 +470,7 @@ button_mask = 3
 text = "Cauldron"
 
 [node name="CalderoIcono" type="Sprite2D" parent="Button"]
-position = Vector2(-39, 59)
+position = Vector2(-39.07, 59)
 scale = Vector2(0.555, 0.555)
 texture = ExtResource("11_ab20h")
 

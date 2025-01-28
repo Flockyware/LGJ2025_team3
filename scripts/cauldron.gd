@@ -74,8 +74,7 @@ func _on_button_d_pressed() -> void:
 
 
 func _on_button_a_mouse_entered() -> void:
-	pass # Replace with function body.
-
+	$interfaz/Control/VBoxContainer/buttons_container_up/Button_A/AnimationPlayer.play("menearse1")
 
 
 func _on_button_pressed() -> void:
@@ -93,3 +92,15 @@ func _on_timer_timeout() -> void:
 		$menuVictoria.visible=true
 	elif estadoJuego=="perdi":
 		$menuPerdida.visible=true
+
+
+func _on_button_b_mouse_entered() -> void:
+	$interfaz/Control/VBoxContainer/buttons_container_up/Button_B/AnimationPlayer.play("meneo2")
+
+
+func _on_button_c_mouse_entered() -> void:
+	$interfaz/Control/VBoxContainer/buttons_container_down/Button_C/AnimationPlayer.play("meneo3")
+
+
+func _on_button_d_mouse_entered() -> void:
+	$interfaz/Control/VBoxContainer/buttons_container_down/Button_D/AnimationPlayer.play("meneo4")

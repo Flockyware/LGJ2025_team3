@@ -1,9 +1,11 @@
-[gd_scene load_steps=31 format=3 uid="uid://b7hy26m6yeft1"]
+[gd_scene load_steps=35 format=3 uid="uid://b7hy26m6yeft1"]
 
 [ext_resource type="Script" path="res://scripts/client.gd" id="1_tvcck"]
 [ext_resource type="Texture2D" uid="uid://ceh33sx57ni2n" path="res://assets/cliente/fondoVaca.png" id="2_xpvff"]
-[ext_resource type="Texture2D" uid="uid://celwmfti0j3sk" path="res://assets/cliente/P2 c.png" id="3_ih1pk"]
+[ext_resource type="Texture2D" uid="uid://pwwu8427h7yd" path="res://assets/cliente/gatoyobro1.png" id="3_deohr"]
 [ext_resource type="Texture2D" uid="uid://58vfq4r4xi1e" path="res://assets/cliente/P2 d.png" id="4_kr6bt"]
+[ext_resource type="Texture2D" uid="uid://2re04lnbyn57" path="res://assets/cliente/gatoyobro2.png" id="4_oso3k"]
+[ext_resource type="Texture2D" uid="uid://dhxfuearrh2wr" path="res://assets/cliente/gatoyobro3.png" id="5_f65m5"]
 [ext_resource type="Texture2D" uid="uid://b354bitg4s87u" path="res://assets/cliente/P2 e.png" id="5_nyljq"]
 [ext_resource type="Texture2D" uid="uid://b5cjj4n7gwsq1" path="res://assets/cliente/P2 f.png" id="6_stiq5"]
 [ext_resource type="Texture2D" uid="uid://cqbpv6m27fqd8" path="res://assets/cliente/iconoChiwire.png" id="7_kouxx"]
@@ -15,9 +17,33 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="11_av554"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="12_ngksv"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="13_8einr"]
+[ext_resource type="Texture2D" uid="uid://dexdo01sulcnd" path="res://assets/caldero/burbuja.png" id="13_d7pyf"]
 [ext_resource type="Resource" uid="uid://mfdsmrxi1e2e" path="res://timelines/Arbolito.tres" id="16_3a3hd"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="17_4nvsw"]
 [ext_resource type="AudioStream" uid="uid://c5jquvfsflkdw" path="res://assets/cliente/Voz del gato.wav" id="17_5xges"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4qq2r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_deohr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oso3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f65m5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oso3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_deohr")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_vpfi6"]
 length = 0.001
@@ -65,6 +91,50 @@ tracks/3/keys = {
 "points": PackedFloat32Array(652, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../AnimatedSprite2D:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../AnimatedSprite2D:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../AnimatedSprite2D:scale:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../AnimatedSprite2D:scale:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.673516, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="Animation" id="Animation_y56jf"]
 resource_name = "centrarGato"
@@ -86,6 +156,28 @@ tracks/1/path = NodePath(".:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0, 619.12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AnimatedSprite2D:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0, 619.12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AnimatedSprite2D:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(652, -0.25, 0, 0.25, 0, 619.12, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
@@ -137,6 +229,50 @@ tracks/3/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(652, -0.25, 0, 0.25, 0, 608.5, -0.25, 0, 0.25, 0, 652, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.233333, 0.5)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../AnimatedSprite2D:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(411, -0.25, 0, 0.25, 0, 411, -0.25, 0, 0.25, 0, 411, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.266667, 0.5)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../AnimatedSprite2D:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(652, -0.25, 0, 0.25, 0, 610.68, -0.25, 0, 0.25, 0, 652, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.266667, 0.5)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../AnimatedSprite2D:scale:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.674, -0.25, 0, 0.25, 0, 0.674, -0.25, 0, 0.25, 0, 0.674, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.266667, 0.5)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../AnimatedSprite2D:scale:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.674, -0.25, 0, 0.25, 0, 0.749, -0.25, 0, 0.25, 0, 0.674, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.266667, 0.5)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ey6ud"]
@@ -282,22 +418,26 @@ script = ExtResource("13_8einr")
 script = ExtResource("1_tvcck")
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(1490, 487)
+position = Vector2(1510.07, 487)
 scale = Vector2(1.208, 0.706)
 texture = ExtResource("2_xpvff")
 
-[node name="P2C" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(411, 652)
-scale = Vector2(0.673516, 0.673516)
-texture = ExtResource("3_ih1pk")
+scale = Vector2(0.674, 0.674)
+sprite_frames = SubResource("SpriteFrames_4qq2r")
+frame = 4
+frame_progress = 1.0
+speed_scale = 2.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="P2C"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+root_node = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_ey6ud")
 }
 
 [node name="P2D" type="Sprite2D" parent="."]
-position = Vector2(958.644, 907)
+position = Vector2(962.444, 907)
 scale = Vector2(0.770115, 0.770115)
 texture = ExtResource("4_kr6bt")
 
@@ -337,6 +477,10 @@ position = Vector2(1683, 625)
 scale = Vector2(0.76, 0.76)
 texture = ExtResource("6_stiq5")
 
+[node name="Burbuja" type="Sprite2D" parent="."]
+position = Vector2(180, 833)
+texture = ExtResource("13_d7pyf")
+
 [node name="Button" type="Button" parent="."]
 offset_left = 117.0
 offset_top = 97.0
@@ -371,6 +515,10 @@ script = ExtResource("17_4nvsw")
 data = ExtResource("16_3a3hd")
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_vc7y8"), SubResource("RichTextEffect_7d2ae"), SubResource("RichTextEffect_iij7l")])
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="dialogue_ended" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_ended"]
 [connection signal="dialogue_signal" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

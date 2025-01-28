@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhqr6sholxy1h"]
+[gd_scene load_steps=8 format=3 uid="uid://bhqr6sholxy1h"]
 
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_xaqdp"]
 [ext_resource type="Texture2D" uid="uid://c3ystqcp35tbd" path="res://assets/cliente/fondoBonitp.webp" id="2_lqq18"]
 [ext_resource type="Theme" uid="uid://5rr8thblij44" path="res://assets/start_menu.tres" id="2_pw48x"]
 [ext_resource type="FontFile" uid="uid://cumdkjhxvwu1s" path="res://assets/fonts/Lambda-Regular.otf" id="3_pkluc"]
+[ext_resource type="Script" path="res://scenes/credits.gd" id="5_tcarb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2u51o"]
 font = ExtResource("3_pkluc")
@@ -14,6 +15,11 @@ outline_color = Color(0.0313726, 0.0235294, 0.152941, 1)
 shadow_size = 5
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(19.775, 20.635)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lpqqq"]
+line_spacing = 2.24
+font = ExtResource("3_pkluc")
+font_size = 41
 
 [node name="start_menu" type="Control"]
 texture_filter = 1
@@ -40,9 +46,10 @@ anchors_preset = -1
 anchor_left = 0.25
 anchor_right = 0.75
 anchor_bottom = 0.999
-offset_top = 1.5
-offset_right = -0.00012207
-offset_bottom = -0.420044
+offset_left = -89.0
+offset_top = 2.0
+offset_right = 89.0
+offset_bottom = 0.0799561
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 50
@@ -83,5 +90,75 @@ layout_mode = 2
 theme = ExtResource("2_pw48x")
 text = "EXIT"
 
+[node name="credits" type="Button" parent="Margenes/contenedor principal/Botones"]
+custom_minimum_size = Vector2(140, 70)
+layout_mode = 2
+theme = ExtResource("2_pw48x")
+text = "CREDITS
+"
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.5
+offset_top = -351.5
+offset_right = 575.5
+offset_bottom = 351.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_tcarb")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Programming
+Moizez102 - Christopher hayling - Flockyware
+
+Art and Animation lead 
+Aqua
+
+Dialogue and Designer
+Jararami
+
+Music and Sound Design
+Dani"
+label_settings = SubResource("LabelSettings_lpqqq")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 47.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 31
+text = "x"
+icon_alignment = 1
+
 [connection signal="pressed" from="Margenes/contenedor principal/Botones/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Margenes/contenedor principal/Botones/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Margenes/contenedor principal/Botones/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed"]

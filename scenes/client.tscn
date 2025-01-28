@@ -663,7 +663,6 @@ volume_db = 10.0
 max_distance = 1700.0
 
 [node name="DialogueBox" type="Panel" parent="."]
-visible = false
 offset_left = 694.0
 offset_top = 119.0
 offset_right = 1691.0
@@ -671,6 +670,7 @@ offset_bottom = 535.0
 theme = ExtResource("10_oet1j")
 script = ExtResource("17_4nvsw")
 data = ExtResource("16_3a3hd")
+hide_portrait = true
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_vc7y8"), SubResource("RichTextEffect_7d2ae"), SubResource("RichTextEffect_iij7l")])
 
 [node name="Timer" type="Timer" parent="."]
@@ -678,5 +678,6 @@ wait_time = 2.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="dialogue_ended" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_ended"]
+[connection signal="dialogue_processed" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_processed"]
 [connection signal="dialogue_signal" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

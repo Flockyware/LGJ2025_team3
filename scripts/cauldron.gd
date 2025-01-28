@@ -32,7 +32,8 @@ var animacionButtonD=$interfaz/Control/VBoxContainer/buttons_container_down/Butt
 
 signal mover_a_cliente
 
-
+func _ready():
+	$menuPerdida.hide()
 
 func recipe_print():
 	print(recipe)
@@ -90,8 +91,11 @@ func _on_button_pressed() -> void:
 func _on_timer_timeout() -> void:
 	if estadoJuego=="gane":
 		$menuVictoria.visible=true
+		$Timer.stop()
 	elif estadoJuego=="perdi":
+		$Timer.stop()
 		$menuPerdida.visible=true
+		$menuPerdida/explosion_sonido.play()
 		
 
 

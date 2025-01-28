@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://cns602t8rqrrf"]
+[gd_scene load_steps=81 format=3 uid="uid://cns602t8rqrrf"]
 
 [ext_resource type="Script" path="res://scripts/cauldron.gd" id="1_fypk7"]
 [ext_resource type="Texture2D" uid="uid://byisqpddkdge7" path="res://assets/caldero/fondoNoche.webp" id="2_28spt"]
@@ -45,6 +45,7 @@
 [ext_resource type="Texture2D" uid="uid://c2jhq12vwk88w" path="res://assets/victoria/Burbujelia.png" id="42_e5jmx"]
 [ext_resource type="Texture2D" uid="uid://bx5tg1ok0bcu4" path="res://assets/victoria/BurbujeliaSoplando.png" id="43_lgaqi"]
 [ext_resource type="Texture2D" uid="uid://dbj72m7181yhx" path="res://assets/derrota/explosion PNG.png" id="44_05kvq"]
+[ext_resource type="AudioStream" uid="uid://dlh7dql2mjq31" path="res://assets/sfx/Explosion Sound Effect HD.mp3" id="45_wa7qd"]
 [ext_resource type="Texture2D" uid="uid://bu7hkim7n6khu" path="res://assets/derrota/gatoyobroEnojao.webp" id="45_x3mmx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_flfaj"]
@@ -867,6 +868,9 @@ frame = 1
 position = Vector2(1024.54, 572.751)
 scale = Vector2(0.834, 0.834)
 texture = ExtResource("39_2ilwo")
+
+[node name="explosion_sonido" type="AudioStreamPlayer" parent="menuPerdida"]
+stream = ExtResource("45_wa7qd")
 
 [node name="ExplosionPng" type="Sprite2D" parent="menuPerdida"]
 position = Vector2(-354.366, 23.0808)

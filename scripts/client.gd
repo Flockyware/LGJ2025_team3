@@ -96,3 +96,7 @@ func _on_dialogue_box_dialogue_ended():
 
 
 	
+
+
+func _on_dialogue_box_dialogue_processed(speaker, dialogue, options):
+	print("quesito")

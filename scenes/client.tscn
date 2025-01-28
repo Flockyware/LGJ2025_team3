@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://b7hy26m6yeft1"]
+[gd_scene load_steps=44 format=3 uid="uid://b7hy26m6yeft1"]
 
 [ext_resource type="Script" path="res://scripts/client.gd" id="1_tvcck"]
 [ext_resource type="Texture2D" uid="uid://ceh33sx57ni2n" path="res://assets/cliente/fondoVaca.png" id="2_xpvff"]
@@ -21,6 +21,174 @@
 [ext_resource type="Resource" uid="uid://mfdsmrxi1e2e" path="res://timelines/Arbolito.tres" id="16_3a3hd"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="17_4nvsw"]
 [ext_resource type="AudioStream" uid="uid://c5jquvfsflkdw" path="res://assets/cliente/Voz del gato.wav" id="17_5xges"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_emq43"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_deohr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oso3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f65m5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_afp6g"]
+resource_name = "pestañeo"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.03333, 3.2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_5hf3i"]
+resource_name = "centrarGato"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(492.605, -0.25, 0, 0.25, 0, 701.23, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(670.52, -0.25, 0, 0.25, 0, 620.255, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_k6m3m"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(492.605, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(670.52, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.69, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.69, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_xje4f"]
+resource_name = "salticoGato"
+length = 10.0
+loop_mode = 2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(492.605, -0.25, 0, 0.25, 0, 492.605, -0.25, 0, 0.25, 0, 492.605, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.366667)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(670.52, -0.25, 0, 0.25, 0, 623.075, -0.25, 0, 0.25, 0, 670.52, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.366667)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.69, -0.25, 0, 0.25, 0, 0.69, -0.25, 0, 0.25, 0, 0.69, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.366667)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.69, -0.25, 0, 0.25, 0, 0.825, -0.25, 0, 0.25, 0, 0.69, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.366667)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dhk4a"]
+_data = {
+"RESET": SubResource("Animation_k6m3m"),
+"centrarGato": SubResource("Animation_5hf3i"),
+"pestañeo": SubResource("Animation_afp6g"),
+"salticoGato": SubResource("Animation_xje4f")
+}
 
 [sub_resource type="Animation" id="Animation_vpfi6"]
 length = 0.001
@@ -122,9 +290,9 @@ tracks/2/path = NodePath("../Node2D:position:x")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(642.955, -0.25, 0, 0.25, 0, 777.19, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(642.955, -0.25, 0, 0.25, 0, 953.885, -0.25, 0, 0.25, 0, 777.19, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.533333, 1)
 }
 tracks/3/type = "bezier"
 tracks/3/imported = false
@@ -133,9 +301,9 @@ tracks/3/path = NodePath("../Node2D:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(629.905, -0.25, 0, 0.25, 0, 629.905, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(629.905, -0.25, 0, 0.25, 0, 629.905, -0.25, 0, 0.25, 0, 629.905, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.533333, 1)
 }
 
 [sub_resource type="Animation" id="Animation_5uace"]
@@ -392,8 +560,19 @@ position = Vector2(1510.07, 487)
 scale = Vector2(1.208, 0.706)
 texture = ExtResource("2_xpvff")
 
+[node name="gatoyobro2_0" type="AnimatedSprite2D" parent="."]
+position = Vector2(492.605, 670.52)
+scale = Vector2(0.69, 0.69)
+sprite_frames = SubResource("SpriteFrames_emq43")
+
+[node name="animadorGatoyobro" type="AnimationPlayer" parent="gatoyobro2_0"]
+libraries = {
+"": SubResource("AnimationLibrary_dhk4a")
+}
+
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(693.78, 629.905)
+visible = false
+position = Vector2(953.885, 629.905)
 scale = Vector2(0.674, 0.674)
 
 [node name="animacionPersonaje" type="AnimationPlayer" parent="Node2D"]
@@ -403,8 +582,10 @@ libraries = {
 }
 
 [node name="gatoyobro" type="AnimatedSprite2D" parent="Node2D"]
-position = Vector2(-380.979, -7.27749)
+position = Vector2(-265.252, 81.7433)
 sprite_frames = SubResource("SpriteFrames_4qq2r")
+frame = 4
+frame_progress = 1.0
 speed_scale = 2.0
 
 [node name="P2D" type="Sprite2D" parent="."]

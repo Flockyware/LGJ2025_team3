@@ -19,7 +19,6 @@ func _ready() -> void:
 	$DialogueBox.start("gat1")
 	#var layout = Dialogic.start("res://timelines/timeline.dtl")
 	#layout.register_character(queso, $Marker2D)
-	$Timer.start()
 	#esta funcion genera una receta al azar de 3 ingredinetes
 	set_random_ingridient()
 	print(requested_recipe)
@@ -53,7 +52,8 @@ func set_random_ingridient():
 
 func _on_dialogue_box_dialogue_signal(value: String) -> void:
 		if value == "saltico":
-			$Node2D/animacionPersonaje.play("saltico2.0")
+			$gatoyobro2_0/animadorGatoyobro.stop()
+			$gatoyobro2_0/animadorGatoyobro.play("salticoGato")
 		elif value == "sonidito":
 			$AudioStreamPlayer2D.play()
 	
@@ -62,7 +62,7 @@ func _on_dialogue_box_dialogue_signal(value: String) -> void:
 func _on_dialogue_box_dialogue_ended():
 	$AudioStreamPlayer2D.stop()
 	$P2E/AnimationPlayer.play("moverLibreta")
-	$Node2D/animacionPersonaje.play("centrarGato")
+	$gatoyobro2_0/animadorGatoyobro.play("pestañeo")
 	match requested_recipe[0]:
 		"a":
 			iconoReceta1.frame=0
@@ -94,8 +94,5 @@ func _on_dialogue_box_dialogue_ended():
 			iconoReceta3.frame=3
 
 
-func _on_timer_timeout() -> void:
-	$Node2D/gatoyobro.play()
-	$Timer.start()
-	
+
 	
